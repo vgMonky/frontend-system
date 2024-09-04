@@ -15,9 +15,7 @@
     <br>
     <p>This is a paragraph.</p>
     <br><br><br><br>
-    <button @click="toggleTheme">
-      {{ isDarkMode ? 'Light' : 'Dark' }} Mode
-    </button>
+    <button @click="toggleTheme">Toggle Theme</button>
     <br><br>
     <div class="t0 box">var(--t0)</div>
     <div class="t1 box">var(--t1)</div>
@@ -28,25 +26,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-
-const isDarkMode = ref(false);
-
-function toggleTheme() {
-  isDarkMode.value = !isDarkMode.value;
-  updateTheme();
-}
-
-function updateTheme() {
-  document.documentElement.setAttribute('data-theme', isDarkMode.value ? 'dark' : 'light');
-  localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light');
-}
-
-onMounted(() => {
-  const savedTheme = localStorage.getItem('theme');
-  isDarkMode.value = savedTheme === 'dark';
-  updateTheme();
-});
+import { toggleTheme } from '../state/theme';
 </script>
 
 <style scoped>

@@ -1,71 +1,69 @@
 <script setup>
-import { ref } from 'vue';
+import { computed } from 'vue';
 
-const isOpen = ref(false);
+const props = defineProps({
+  isOpen: {
+    type: Boolean,
+    default: false
+  }
+});
 
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
+const emit = defineEmits(['closeMenu']);
+
+const menuClass = computed(() => ({
+  'menu-sidebar': true,
+  'open': props.isOpen
+}));
 </script>
 
 <template>
-  <div class="menu-container">
-    <button @click="toggleMenu" class="menu-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
-    <div v-if="isOpen" class="menu-dropdown">
-      <router-link to="/" @click="toggleMenu">Intro</router-link>
-      <router-link to="/style" @click="toggleMenu">Style</router-link>
-      <router-link to="/components" @click="toggleMenu">Components</router-link>
-      <router-link to="/layouts" @click="toggleMenu">Layouts</router-link>
-    </div>
+  <div :class="menuClass">
+    <router-link to="/" @click="$emit('closeMenu')">Intro</router-link>
+    <router-link to="/style" @click="$emit('closeMenu')">Style</router-link>
+    <router-link to="/components" @click="$emit('closeMenu')">Components</router-link>
+    <router-link to="/layouts" @click="$emit('closeMenu')">Layouts</router-link>
   </div>
 </template>
 
 <style scoped>
-svg{
-    color: var(--t0);
-}
-
-.menu-container {
-  position: relative;
-}
-
-.menu-icon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.menu-dropdown {
-  position: absolute;
+.menu-sidebar {
+  position: fixed;
+  top: 80px; /* Adjust based on your NavBar height */
   right: 0;
-  top: 100%;
+  height: calc(100vh - 80px); /* Adjust based on your NavBar height */
+  width: 250px;
   background-color: var(--t4);
-  border: 1px solid var(--t3);
-  border-radius: 4px;
-  padding: 10px;
+  border-left: 1px solid var(--t3);
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
+  gap: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
 }
 
-.menu-dropdown a {
+.menu-sidebar.open {
+  transform: translateX(0);
+}
+
+.menu-sidebar a {
   color: var(--t1);
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
-.menu-dropdown a:hover {
+.menu-sidebar a:hover {
   text-decoration: underline;
 }
 
-.menu-dropdown a.router-link-active {
+.menu-sidebar a.router-link-active {
   font-weight: bold;
+}
+
+@media (min-width: 1201px) {
+  .menu-sidebar {
+    transform: translateX(0);
+  }
 }
 </style>
