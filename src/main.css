@@ -7,7 +7,7 @@
 }
 
 :root {
-  /* THIS WILL BE OVERWRITTEN  BY colorVariable.js */
+  /* THIS WILL BE OVERWRITTEN  BY colorVariable.js when App.vue onMounted()*/
   --color0: #0f0f0f; 
   --color1: #404040; 
   --color2: #819234; 
@@ -28,6 +28,7 @@
   --c3: var(--color1); 
   --c4: var(--color0);
 }
+
 
 body {
   min-height: 100vh;
@@ -68,12 +69,26 @@ button{
   color: var(--c0);
   border: 1px solid var(--c3);
   
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 12px 16px;
-  
 }
 button:hover{
   background-color: var(--c2);
   color: var(--c4);
   border: 1px solid var(--c2);
 }
+
+
+/* instead of creating for example card components(whitch is some content with a container arround), just create all components uncontained with transparent background, and add the class=contained if it needs to be contained. This applays to whatever element> */
+.contained{
+  display: inline-block;
+  background-color: var(--c4);
+  color: var(--c0);
+  border: 1px solid var(--c3);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+
+
+
+/*.invert class: I need that for this element and every html child element or content inside an element with this class it will use the oposite color theme */

@@ -9,7 +9,6 @@ const handleColorChange = (event, key) => {
 <template>
   <div class="color-editor">
     <h3>Edit Color Variables</h3>
-    <p>It is recomended to keep the same "value" (light/dark amount) for each color, and always check there is good contrast between them.</p>
     <br>
     <div v-for="(color, key) in colorVariables" :key="key" class="color-input">
       <label :for="key">{{ key }}:</label>

@@ -46,10 +46,4 @@ defineProps({
   align-items: center;
   gap: 10px;
 }
-
-@media (min-width: 1201px) {
-    .menu-button {
-      display: none;
-    }
-}
 </style>

@@ -79,10 +79,4 @@ watch(isMenuOpen, (isOpen) => {
   font-weight: bold;
 }
 
-@media (min-width: 1201px) {
-  .menu-sidebar {
-    transform: translateX(0);
-    width: 350px;
-  }
-}
 </style>

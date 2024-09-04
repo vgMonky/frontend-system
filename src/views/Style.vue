@@ -1,28 +1,46 @@
 <template>
   <view>
-    <h1>Headline h1</h1>
-    <br>
-    <p>This is a paragraph.</p>
-    <br>
-    <br>
-    <h2>Headline h2</h2>
-    <br>
-    <br>
-    <p>This is a paragraph.</p>
-    <br>
-    <br>
-    <h3>Headline h3</h3>
-    <br>
-    <p>This is a paragraph.</p>
-    <br><br><br><br>
-    <button @click="toggleTheme">Toggle light/dark</button>
+    <div class="contained invert">
+      <h1>Headline h1</h1>
+      <br>
+      <p>Font and pt sizes will be defined here</p>
+      <br>
+      <br>
+      <h2>Headline h2</h2>
+      <br>
+      <br>
+      <p>This is a paragraph.</p>
+      <br>
+      <br>
+      <h3>Headline h3</h3>
+      <br>
+      <p>This is a paragraph.</p>
+    </div>
+
     <br><br>
-    <div class="c0 box">var(--c0)</div>
-    <div class="c1 box">var(--c1)</div>
-    <div class="c2 box">var(--c2)</div>
-    <div class="c3 box">var(--c3)</div>
-    <div class="c4 box">var(--c4)</div>
-    <ColorEditor/>
+
+    <div class="contained">
+      <h2>Color Theme</h2>
+      <p>Colors and color-theme will be explained and edited here. The ".invert" property will be explained here</p>
+      <button @click="toggleTheme">Toggle light/dark</button>
+      <br><br>
+      <button class="contained invert" @click="toggleTheme">Toggle light/dark</button>
+      <br><br>
+      <div class="c0 box">var(--c0)</div>
+      <div class="c1 box">var(--c1)</div>
+      <div class="c2 box">var(--c2)</div>
+      <div class="c3 box">var(--c3)</div>
+      <div class="c4 box">var(--c4)</div>
+      <br>
+      <ColorEditor/>
+    </div> 
+
+    <div class="contained">
+      <h1>Shape</h1>
+      <p>whenever there is a contained content (whether its a box, text-box or button) the corner radius will give it a sharp or round feeling defining the shape style. The contained class will be explained here.</p>
+    </div>
+
+
   </view>
 </template>
 
