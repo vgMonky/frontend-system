@@ -3,11 +3,11 @@ import { onMounted } from 'vue';
 import NavBar from './components/NavBar.vue';
 import Menu from './components/Menu.vue';
 import { initTheme } from './state/theme';
-import { isMenuOpen } from './state/useMenu';
+import { initColorVariables } from './state/colorVariables';
 
-// Connect and set Theme
 onMounted(() => {
   initTheme();
+  initColorVariables();
 });
 </script>
 
@@ -15,7 +15,7 @@ onMounted(() => {
   <div class="app-container">
     <NavBar title="Frontend System" />
     <main class="main-content">
-      <Menu/>
+      <Menu />
       <router-view></router-view>
     </main>
   </div>

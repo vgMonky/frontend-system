@@ -7,6 +7,7 @@
 }
 
 :root {
+  /* THIS WILL BE OVERWRITTEN  BY colorVariable.js */
   --color0: #0f0f0f; 
   --color1: #404040; 
   --color2: #819234; 

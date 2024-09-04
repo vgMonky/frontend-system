@@ -15,18 +15,20 @@
     <br>
     <p>This is a paragraph.</p>
     <br><br><br><br>
-    <button @click="toggleTheme">Toggle Theme</button>
+    <button @click="toggleTheme">Toggle light/dark</button>
     <br><br>
     <div class="t0 box">var(--t0)</div>
     <div class="t1 box">var(--t1)</div>
     <div class="t2 box">var(--t2)</div>
     <div class="t3 box">var(--t3)</div>
     <div class="t4 box">var(--t4)</div>
+    <ColorEditor/>
   </view>
 </template>
 
 <script setup>
 import { toggleTheme } from '../state/theme';
+import ColorEditor from '../components/ColorEditor.vue';
 </script>
 
 <style scoped>
