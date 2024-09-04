@@ -1,27 +1,45 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue';
+import { isMenuOpen, closeMenu } from '../state/useMenu';
 
-const props = defineProps({
-  isOpen: {
-    type: Boolean,
-    default: false
-  }
-});
-
-const emit = defineEmits(['closeMenu']);
+const menuRef = ref(null);
 
 const menuClass = computed(() => ({
   'menu-sidebar': true,
-  'open': props.isOpen
+  'open': isMenuOpen.value
 }));
+
+const handleOutsideClick = (event) => {
+  if (menuRef.value && !menuRef.value.contains(event.target) && isMenuOpen.value) {
+    closeMenu();
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('click', handleOutsideClick);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleOutsideClick);
+});
+
+watch(isMenuOpen, (isOpen) => {
+  if (isOpen) {
+    setTimeout(() => {
+      document.addEventListener('click', handleOutsideClick);
+    }, 0);
+  } else {
+    document.removeEventListener('click', handleOutsideClick);
+  }
+});
 </script>
 
 <template>
-  <div :class="menuClass">
-    <router-link to="/" @click="$emit('closeMenu')">Intro</router-link>
-    <router-link to="/style" @click="$emit('closeMenu')">Style</router-link>
-    <router-link to="/components" @click="$emit('closeMenu')">Components</router-link>
-    <router-link to="/layouts" @click="$emit('closeMenu')">Layouts</router-link>
+  <div :class="menuClass" ref="menuRef">
+    <router-link to="/" @click="closeMenu">Intro</router-link>
+    <router-link to="/style" @click="closeMenu">Style</router-link>
+    <router-link to="/components" @click="closeMenu">Components</router-link>
+    <router-link to="/layouts" @click="closeMenu">Layouts</router-link>
   </div>
 </template>
 
@@ -30,7 +48,7 @@ const menuClass = computed(() => ({
   position: fixed;
   top: 80px; /* Adjust based on your NavBar height */
   right: 0;
-  height: calc(100vh - 80px); /* Adjust based on your NavBar height */
+  height: 100vh;
   width: 250px;
   background-color: var(--t4);
   border-left: 1px solid var(--t3);
@@ -64,6 +82,7 @@ const menuClass = computed(() => ({
 @media (min-width: 1201px) {
   .menu-sidebar {
     transform: translateX(0);
+    width: 350px;
   }
 }
 </style>

@@ -1,15 +1,11 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import NavBar from './components/NavBar.vue';
 import Menu from './components/Menu.vue';
 import { initTheme } from './state/theme';
+import { isMenuOpen } from './state/useMenu';
 
-const isMenuOpen = ref(false);
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-
+// Connect and set Theme
 onMounted(() => {
   initTheme();
 });
@@ -17,9 +13,9 @@ onMounted(() => {
 
 <template>
   <div class="app-container">
-    <NavBar title="Frontend System" @toggle-menu="toggleMenu" />
+    <NavBar title="Frontend System" />
     <main class="main-content">
-      <Menu :is-open="isMenuOpen" @close-menu="isMenuOpen = false" />
+      <Menu/>
       <router-view></router-view>
     </main>
   </div>
