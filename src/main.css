@@ -7,19 +7,25 @@
 }
 
 :root {
-  --t0: #000000; 
-  --t1: #404040; 
-  --t2: #819234; 
-  --t3: #C0C0C0; 
-  --t4: #f9f9f9; 
+  --color0: #0f0f0f; 
+  --color1: #404040; 
+  --color2: #819234; 
+  --color3: #C0C0C0; 
+  --color4: #f9f9f9; 
 }
-
+[data-theme="light"] {
+  --t0: var(--color0); 
+  --t1: var(--color1); 
+  --t2: var(--color2); 
+  --t3: var(--color3); 
+  --t4: var(--color4); 
+}
 [data-theme="dark"] {
-  --t0: #FFFFFF; 
-  --t1: #C0C0C0; 
-  --t2: #819234; 
-  --t3: #404040; 
-  --t4: #151515;
+  --t0: var(--color4); 
+  --t1: var(--color3); 
+  --t2: var(--color2); 
+  --t3: var(--color1); 
+  --t4: var(--color0);
 }
 
 body {
