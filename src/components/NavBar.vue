@@ -31,8 +31,8 @@ defineProps({
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid var(--t3);
-  background-color: var(--t4);
+  border-bottom: 1px solid var(--c3);
+  background-color: var(--c4);
   position: fixed;
   top: 0;
   left: 0;

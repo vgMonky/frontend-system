@@ -50,8 +50,8 @@ watch(isMenuOpen, (isOpen) => {
   right: 0;
   height: 100vh;
   width: 250px;
-  background-color: var(--t4);
-  border-left: 1px solid var(--t3);
+  background-color: var(--c4);
+  border-left: 1px solid var(--c3);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ watch(isMenuOpen, (isOpen) => {
 }
 
 .menu-sidebar a {
-  color: var(--t1);
+  color: var(--c1);
   text-decoration: none;
   font-size: 1.1rem;
 }
