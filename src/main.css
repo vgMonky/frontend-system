@@ -15,8 +15,11 @@
   --color4: #f9f9f9;
 
   /* Radius Variable */
-  --r0: 15px;
+  --r0: 30px;
   --r1: 30px;
+  /* padding Variables */
+  --pad0: 40px;
+  --pad1: 40px;
 
   /* Text Variables */
   --font: sans-serif;
@@ -103,5 +106,5 @@ button:hover{
   background-color: var(--c4);
   border: 1px solid var(--c3);
   border-radius: var(--r0);
-  padding: 20px 20px;
+  padding: var(--pad0) var(--pad1);
 }

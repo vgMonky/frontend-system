@@ -23,7 +23,7 @@ const toggleAdvanced = () => {
     <h3>Edit Color Variables</h3>
     <br>
     <div class="color-input">
-      <label for="color2">color2:</label>
+      <label for="color2">Color:</label>
       <input
         id="color2"
         type="color"
