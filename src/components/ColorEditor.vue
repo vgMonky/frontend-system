@@ -1,5 +1,6 @@
 <script setup>
 import { colorVariables, updateColorVariable, resetToDefaults } from '../state/colorVariables';
+import { toggleTheme } from '../state/theme';
 
 const handleColorChange = (event, key) => {
   updateColorVariable(key, event.target.value);
@@ -7,25 +8,37 @@ const handleColorChange = (event, key) => {
 </script>
 
 <template>
-  <div class="color-editor">
-    <h3>Edit Color Variables</h3>
+    <h2>Color Theme</h2>
+    <p>Colors and color-theme will be explained and edited here. The ".invert" property will be explained here</p>
+    <button class="invert" @click="toggleTheme">Toggle light/dark</button>
+    <br><br>
+    <button @click="toggleTheme">Toggle light/dark</button>
+    <br><br>
+    <div class="c0 box">var(--c0)</div>
+    <div class="c1 box">var(--c1)</div>
+    <div class="c2 box">var(--c2)</div>
+    <div class="c3 box">var(--c3)</div>
+    <div class="c4 box">var(--c4)</div>
     <br>
-    <div v-for="(color, key) in colorVariables" :key="key" class="color-input">
-      <label :for="key">{{ key }}:</label>
-      <input 
-        :id="key" 
-        type="color" 
-        :value="color" 
-        @input="(event) => handleColorChange(event, key)"
-      />
-      <input 
-        type="text" 
-        :value="color" 
-        @input="(event) => handleColorChange(event, key)"
-      />
+    <div class="color-editor">
+        <h3>Edit Color Variables</h3>
+        <br>
+        <div v-for="(color, key) in colorVariables" :key="key" class="color-input">
+        <label :for="key">{{ key }}:</label>
+        <input 
+            :id="key" 
+            type="color" 
+            :value="color" 
+            @input="(event) => handleColorChange(event, key)"
+        />
+        <input 
+            type="text" 
+            :value="color" 
+            @input="(event) => handleColorChange(event, key)"
+        />
+        </div>
+        <button @click="resetToDefaults">Reset to Defaults</button>
     </div>
-    <button @click="resetToDefaults">Reset to Defaults</button>
-  </div>
 </template>
 
 <style scoped>
@@ -44,4 +57,31 @@ label {
 input[type="color"] {
   margin-right: 10px;
 }
+
+
+.box {
+    width: 80px;
+    height: 80px;
+  }
+  .c0 {
+    background-color: var(--c0);
+    color: var(--c4);
+  }
+  .c1 {
+    background-color: var(--c1);
+    color: var(--c4);
+  }
+  .c2 {
+    background-color: var(--c2);
+    color: var(--c4);
+  }
+  .c3 {
+    background-color: var(--c3);
+    color: var(--c0);
+  }
+  .c4 {
+    background-color: var(--c4);
+    border: 1px solid var(--c3);
+    color: var(--c0);
+  }
 </style>

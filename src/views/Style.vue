@@ -1,75 +1,27 @@
 <template>
   <view>
     <div class="contained">
-      <h1>Headline h1</h1>
-      <br>
-      <p>Font and pt sizes will be defined here</p>
-      <br>
-      <br>
-      <h2>Headline h2</h2>
-      <br>
-      <br>
-      <p>This is a paragraph.</p>
-      <br>
-      <br>
-      <h3>Headline h3</h3>
-      <br>
-      <p>This is a paragraph.</p>
+      <TextEditor/>
     </div>
 
     <div class="contained ">
-      <h2>Color Theme</h2>
-      <p>Colors and color-theme will be explained and edited here. The ".invert" property will be explained here</p>
-      <button class="invert" @click="toggleTheme">Toggle light/dark</button>
-      <br><br>
-      <button @click="toggleTheme">Toggle light/dark</button>
-      <br><br>
-      <div class="c0 box">var(--c0)</div>
-      <div class="c1 box">var(--c1)</div>
-      <div class="c2 box">var(--c2)</div>
-      <div class="c3 box">var(--c3)</div>
-      <div class="c4 box">var(--c4)</div>
-      <br>
       <ColorEditor/>
     </div> 
 
     <div class="contained">
-      <h2>Shape</h2>
-      <p>whenever there is a contained content (whether its a box, text-box or button) the corner radius will give it a sharp or round feeling defining the shape style. The contained class will be explained here.</p>
+      <ShapeEditor/>
     </div>
 
   </view>
 </template>
 
 <script setup>
-import { toggleTheme } from '../state/theme';
+import TextEditor from '../components/TextEditor.vue';
 import ColorEditor from '../components/ColorEditor.vue';
+import ShapeEditor from '../components/ShapeEditor.vue';
+
 </script>
 
 <style scoped>
-.box {
-  width: 80px;
-  height: 80px;
-}
-.c0 {
-  background-color: var(--c0);
-  color: var(--c4);
-}
-.c1 {
-  background-color: var(--c1);
-  color: var(--c4);
-}
-.c2 {
-  background-color: var(--c2);
-  color: var(--c4);
-}
-.c3 {
-  background-color: var(--c3);
-  color: var(--c0);
-}
-.c4 {
-  background-color: var(--c4);
-  border: 1px solid var(--c3);
-  color: var(--c0);
-}
+
 </style>
