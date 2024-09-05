@@ -40,43 +40,7 @@
   --c3: var(--color1); 
   --c4: var(--color0);
 }
-/* invert color theme with the .invert class, nested up to 5 times */
-[data-theme="light"] .invert,
-[data-theme="light"] .invert .invert .invert,
-[data-theme="light"] .invert .invert .invert .invert .invert {
-  --c0: var(--color4); 
-  --c1: var(--color3); 
-  --c2: var(--color2); 
-  --c3: var(--color1); 
-  --c4: var(--color0);
-}
-[data-theme="dark"] .invert ,
-[data-theme="dark"] .invert .invert .invert,
-[data-theme="dark"] .invert .invert .invert .invert .invert {
-  --c0: var(--color0);
-  --c1: var(--color1);
-  --c2: var(--color2);
-  --c3: var(--color3);
-  --c4: var(--color4);
-}
-[data-theme="light"] .invert .invert,
-[data-theme="light"] .invert .invert .invert .invert,
-[data-theme="light"] .invert .invert .invert .invert .invert .invert {
-  --c0: var(--color0);
-  --c1: var(--color1);
-  --c2: var(--color2);
-  --c3: var(--color3);
-  --c4: var(--color4);
-}
-[data-theme="dark"] .invert .invert,
-[data-theme="dark"] .invert .invert .invert .invert,
-[data-theme="dark"] .invert .invert .invert .invert .invert .invert {
-  --c0: var(--color4); 
-  --c1: var(--color3); 
-  --c2: var(--color2); 
-  --c3: var(--color1); 
-  --c4: var(--color0);
-}
+
 
 
 
@@ -119,11 +83,11 @@ p {
 
 button{
   background-color: var(--c4);
-  color: var(--c0);
-  border: 1px solid var(--c3);
-  
+  color: var(--c2);
+  border: 1px solid var(--c2);
+
+  padding: 10px 20px;
   border-radius: var(--r1);
-  padding: 12px 16px;
   transition: 0.2s ease-in;
 }
 button:hover{
@@ -137,7 +101,6 @@ button:hover{
 .contained{
   display: block;
   background-color: var(--c4);
-  color: var(--c0);
   border: 1px solid var(--c3);
   border-radius: var(--r0);
   padding: 20px 20px;

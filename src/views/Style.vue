@@ -3,7 +3,7 @@
     <TextEditor/>
   </div>
 
-  <div class="contained ">
+  <div class="contained">
     <ColorEditor/>
   </div> 
 

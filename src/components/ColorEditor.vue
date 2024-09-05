@@ -17,8 +17,6 @@ const toggleAdvanced = () => {
 <template>
   <h2>Color Theme</h2>
   <p>Colors and color-theme will be explained and edited here. The ".invert" property will be explained here</p>
-  <button class="invert" @click="toggleTheme">Toggle light/dark</button>
-  <br><br>
   <button @click="toggleTheme">Toggle light/dark</button>
   <br><br>
   <div class="c0 box">var(--c0)</div>
