@@ -16,15 +16,9 @@ const toggleAdvanced = () => {
 
 <template>
   <h2>Color Theme</h2>
-  <p>Colors and color-theme will be explained and edited here. The ".invert" property will be explained here</p>
+  <p>Colors and color-theme will be explained and edited here. </p>
   <button @click="toggleTheme">Toggle light/dark</button>
   <br><br>
-  <div class="c0 box">var(--c0)</div>
-  <div class="c1 box">var(--c1)</div>
-  <div class="c2 box">var(--c2)</div>
-  <div class="c3 box">var(--c3)</div>
-  <div class="c4 box">var(--c4)</div>
-  <br>
   <div class="color-editor">
     <h3>Edit Color Variables</h3>
     <br>
@@ -80,30 +74,5 @@ label {
 }
 input[type="color"] {
   margin-right: 10px;
-}
-.box {
-  width: 80px;
-  height: 80px;
-}
-.c0 {
-  background-color: var(--c0);
-  color: var(--c4);
-}
-.c1 {
-  background-color: var(--c1);
-  color: var(--c4);
-}
-.c2 {
-  background-color: var(--c2);
-  color: var(--c4);
-}
-.c3 {
-  background-color: var(--c3);
-  color: var(--c0);
-}
-.c4 {
-  background-color: var(--c4);
-  border: 1px solid var(--c3);
-  color: var(--c0);
 }
 </style>
