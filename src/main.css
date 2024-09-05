@@ -12,8 +12,13 @@
   --color1: #404040; 
   --color2: #819234; 
   --color3: #C0C0C0; 
-  --color4: #f9f9f9; 
+  --color4: #f9f9f9;
+
+  /* Radius Variable */
+  --r0: 15px;
+  --r1: 30px;
 }
+/* SET COLOR THEMES BASED ON COLOR VARIABLES */
 [data-theme="light"] {
   --c0: var(--color0); 
   --c1: var(--color1); 
@@ -28,6 +33,47 @@
   --c3: var(--color1); 
   --c4: var(--color0);
 }
+/* invert color theme with the .invert class, nested up to 5 times */
+[data-theme="light"] .invert,
+[data-theme="light"] .invert .invert .invert,
+[data-theme="light"] .invert .invert .invert .invert .invert {
+  --c0: var(--color4); 
+  --c1: var(--color3); 
+  --c2: var(--color2); 
+  --c3: var(--color1); 
+  --c4: var(--color0);
+}
+[data-theme="dark"] .invert ,
+[data-theme="dark"] .invert .invert .invert,
+[data-theme="dark"] .invert .invert .invert .invert .invert {
+  --c0: var(--color0);
+  --c1: var(--color1);
+  --c2: var(--color2);
+  --c3: var(--color3);
+  --c4: var(--color4);
+}
+[data-theme="light"] .invert .invert,
+[data-theme="light"] .invert .invert .invert .invert,
+[data-theme="light"] .invert .invert .invert .invert .invert .invert {
+  --c0: var(--color0);
+  --c1: var(--color1);
+  --c2: var(--color2);
+  --c3: var(--color3);
+  --c4: var(--color4);
+}
+[data-theme="dark"] .invert .invert,
+[data-theme="dark"] .invert .invert .invert .invert,
+[data-theme="dark"] .invert .invert .invert .invert .invert .invert {
+  --c0: var(--color4); 
+  --c1: var(--color3); 
+  --c2: var(--color2); 
+  --c3: var(--color1); 
+  --c4: var(--color0);
+}
+
+
+
+
 
 
 body {
@@ -69,8 +115,9 @@ button{
   color: var(--c0);
   border: 1px solid var(--c3);
   
-  border-radius: 6px;
+  border-radius: var(--r1);
   padding: 12px 16px;
+  transition: 0.2s ease-in;
 }
 button:hover{
   background-color: var(--c2);
@@ -85,10 +132,6 @@ button:hover{
   background-color: var(--c4);
   color: var(--c0);
   border: 1px solid var(--c3);
-  border-radius: 6px;
-  padding: 12px 16px;
+  border-radius: var(--r0);
+  padding: 20px 20px;
 }
-
-
-
-/*.invert class: I need that for this element and every html child element or content inside an element with this class it will use the oposite color theme */

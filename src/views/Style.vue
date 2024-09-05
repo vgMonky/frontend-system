@@ -1,6 +1,6 @@
 <template>
   <view>
-    <div class="contained invert">
+    <div class="contained">
       <h1>Headline h1</h1>
       <br>
       <p>Font and pt sizes will be defined here</p>
@@ -17,14 +17,12 @@
       <p>This is a paragraph.</p>
     </div>
 
-    <br><br>
-
-    <div class="contained">
+    <div class="contained ">
       <h2>Color Theme</h2>
       <p>Colors and color-theme will be explained and edited here. The ".invert" property will be explained here</p>
-      <button @click="toggleTheme">Toggle light/dark</button>
+      <button class="invert" @click="toggleTheme">Toggle light/dark</button>
       <br><br>
-      <button class="contained invert" @click="toggleTheme">Toggle light/dark</button>
+      <button @click="toggleTheme">Toggle light/dark</button>
       <br><br>
       <div class="c0 box">var(--c0)</div>
       <div class="c1 box">var(--c1)</div>
@@ -36,10 +34,9 @@
     </div> 
 
     <div class="contained">
-      <h1>Shape</h1>
+      <h2>Shape</h2>
       <p>whenever there is a contained content (whether its a box, text-box or button) the corner radius will give it a sharp or round feeling defining the shape style. The contained class will be explained here.</p>
     </div>
-
 
   </view>
 </template>
