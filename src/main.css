@@ -17,6 +17,13 @@
   /* Radius Variable */
   --r0: 15px;
   --r1: 30px;
+
+  /* Text Variables */
+  --font: sans-serif;
+  --hcolor: var(--c0);
+  --hmax: 38pt;
+  --hmin: 18pt;
+
 }
 /* SET COLOR THEMES BASED ON COLOR VARIABLES */
 [data-theme="light"] {
@@ -78,7 +85,7 @@
 
 body {
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: var(--font);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -88,22 +95,25 @@ body {
 
 
 h1 {
-  font-size: 38pt;
+  font-size: var(--hmax);
   font-weight: 600;
+  color: var(--hcolor);
 }
 
 h2 {
-  font-size: 28pt;
+  font-size: calc((var(--hmax) + var(--hmin)) / 2);
   font-weight: 600;
+  color: var(--hcolor);
 }
 
 h3 {
-  font-size: 18pt;
+  font-size: var(--hmin);
   font-weight: 600;
+  color: var(--hcolor);
 }
 
 p {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 

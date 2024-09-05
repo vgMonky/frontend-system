@@ -26,6 +26,8 @@ onMounted(() => {
 main {
   padding-top: 80px;
   margin: 40px 40px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 </style>
