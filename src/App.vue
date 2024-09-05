@@ -14,15 +14,18 @@ onMounted(() => {
 <template>
   <div class="app-container">
     <NavBar title="Frontend System" />
+    <Menu />
     <main class="main-content">
-      <Menu />
       <router-view></router-view>
     </main>
+    
   </div>
 </template>
 
 <style>
 main {
   padding-top: 80px;
+  margin: 40px 40px;
+  display: block;
 }
 </style>

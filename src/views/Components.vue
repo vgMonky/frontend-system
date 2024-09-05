@@ -1,7 +1,5 @@
 <template>
-  <view>
-    <h1>Components</h1>
-  </view>
+<h1>Components</h1>
 </template>
 
 <script setup>

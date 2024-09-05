@@ -1,9 +1,7 @@
 <template>
-  <view> 
-    <h1>Introduction</h1>
-    <br>
-    <p>This is live documentation to showcase, edit and use a generic design system. </p>
-  </view>
+  <h1>Introduction</h1>
+  <br>
+  <p>This is live documentation to showcase, edit and use a generic design system. </p>
 </template>
 
 <script setup>

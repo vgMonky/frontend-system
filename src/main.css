@@ -85,10 +85,7 @@ body {
   background-color: var(--c4);
   color: var(--c0);
 }
-view{
-  margin: 40px 40px;
-  display: block;
-}
+
 
 h1 {
   font-size: 38pt;
@@ -128,7 +125,7 @@ button:hover{
 
 /* instead of creating for example card components(whitch is some content with a container arround), just create all components uncontained with transparent background, and add the class=contained if it needs to be contained. This applays to whatever element> */
 .contained{
-  display: inline-block;
+  display: block;
   background-color: var(--c4);
   color: var(--c0);
   border: 1px solid var(--c3);

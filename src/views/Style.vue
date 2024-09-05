@@ -1,18 +1,15 @@
 <template>
-  <view>
-    <div class="contained">
-      <TextEditor/>
-    </div>
+  <div class="contained">
+    <TextEditor/>
+  </div>
 
-    <div class="contained ">
-      <ColorEditor/>
-    </div> 
+  <div class="contained ">
+    <ColorEditor/>
+  </div> 
 
-    <div class="contained">
-      <ShapeEditor/>
-    </div>
-
-  </view>
+  <div class="contained">
+    <ShapeEditor/>
+  </div>
 </template>
 
 <script setup>
