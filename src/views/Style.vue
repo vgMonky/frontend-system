@@ -1,20 +1,17 @@
 <template>
   <div class="head">
     <h1>Style and Variables</h1>
-    <p>In this section you can edit the whole style in a global way. Everithing edited here will be applyed live and will automaticly afect both light and dark theme.
-    <br>
-    <br>
-    <button @click="toggleTheme">Toggle light/dark</button>
-    </p>
+    <p>In this section you can edit the whole style in a global way. Everithing edited here will be applyed live and will automaticly afect both light and dark theme.</p>
   </div>
-
-
-  <Expandable title="Text Editor" titleopen="Hide Text Editor">
-    <TextEditor/>
-  </Expandable>
+  <button-bold @click="toggleTheme">Toggle light/dark</button-bold>
+  <br><br>
 
   <Expandable title="Color Editor" titleopen="Hide Color Editor">
     <ColorEditor/>
+  </Expandable>
+
+  <Expandable title="Text Editor" titleopen="Hide Text Editor">
+    <TextEditor/>
   </Expandable>
 
   <Expandable title="Shape Editor" titleopen="Hide Shape Editor">

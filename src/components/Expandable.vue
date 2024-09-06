@@ -30,7 +30,7 @@ const props = defineProps({
   }
 })
 
-const isExpanded = ref(false)
+const isExpanded = ref(true)
 
 const toggleExpand = () => {
   isExpanded.value = !isExpanded.value

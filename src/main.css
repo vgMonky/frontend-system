@@ -8,40 +8,40 @@
 
 :root {
   /* THIS WILL BE OVERWRITTEN  BY colorVariable.js when App.vue onMounted()*/
-  --color0: #0f0f0f; 
-  --color1: #404040; 
-  --color2: #819234; 
-  --color3: #C0C0C0; 
-  --color4: #f9f9f9;
+  --dark: #0f0f0f; 
+  --dark2: #404040; 
+  --color: #819234; 
+  --light2: #C0C0C0; 
+  --light: #f9f9f9;
 
   /* Radius Variable */
-  --r0: 30px;
-  --r1: 30px;
+  --r0: 10px;
+  --r1: 10px;
   /* padding Variables */
-  --pad0: 40px;
-  --pad1: 40px;
+  --pad0: 20px;
+  --pad1: 30px;
 
   /* Text Variables */
   --font: sans-serif;
   --hcolor: var(--c0);
-  --hmax: 38pt;
+  --hmax: 60pt;
   --hmin: 18pt;
 
 }
 /* SET COLOR THEMES BASED ON COLOR VARIABLES */
 [data-theme="light"] {
-  --c0: var(--color0); 
-  --c1: var(--color1); 
-  --c2: var(--color2); 
-  --c3: var(--color3); 
-  --c4: var(--color4); 
+  --c0: var(--dark); 
+  --c1: var(--dark2); 
+  --c2: var(--color); 
+  --c3: var(--light2); 
+  --c4: var(--light); 
 }
 [data-theme="dark"] {
-  --c0: var(--color4); 
-  --c1: var(--color3); 
-  --c2: var(--color2); 
-  --c3: var(--color1); 
-  --c4: var(--color0);
+  --c0: var(--light); 
+  --c1: var(--light2); 
+  --c2: var(--color); 
+  --c3: var(--dark2); 
+  --c4: var(--dark);
 }
 
 
@@ -65,18 +65,33 @@ h1 {
   font-size: var(--hmax);
   font-weight: 600;
   color: var(--hcolor);
+  
+  border-bottom: 1px solid var(--c3);
+  padding-bottom: var(--pad0);
+  margin-top: 20px;
+  margin-bottom: var(--pad0);
 }
 
 h2 {
   font-size: calc((var(--hmax) + var(--hmin)) / 2);
   font-weight: 600;
   color: var(--hcolor);
+
+  border-bottom: 1px solid var(--c3);
+  padding-bottom: var(--pad0);
+  margin-top: 20px;
+  margin-bottom: var(--pad0);
 }
 
 h3 {
   font-size: var(--hmin);
   font-weight: 600;
   color: var(--hcolor);
+
+  border-bottom: 1px solid var(--c3);
+  padding-bottom: var(--pad0);
+  margin-top: 20px;
+  margin-bottom: var(--pad0);
 }
 
 p {
@@ -96,6 +111,20 @@ button{
 button:hover{
   background-color: var(--c2);
   color: var(--c4);
+  border: 1px solid var(--c2);
+}
+button-bold{
+  background-color: var(--c2);
+  color: var(--c4);
+  border: 1px solid var(--c2);
+
+  padding: 10px 20px;
+  border-radius: var(--r1);
+  transition: 0.2s ease-in;
+}
+button-bold:hover{
+  background-color: var(--c4);
+  color: var(--c2);
   border: 1px solid var(--c2);
 }
 
