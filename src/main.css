@@ -10,21 +10,21 @@
   /* THIS WILL BE OVERWRITTEN  BY colorVariable.js when App.vue onMounted()*/
   --dark: #0f0f0f; 
   --dark2: #404040; 
-  --color: #819234; 
+  --accent: #819234; 
   --light2: #C0C0C0; 
-  --light: #f9f9f9;
+  --light: #f6f5f4;
 
   /* Radius Variable */
-  --r0: 10px;
-  --r1: 10px;
+  --r0: 5px;
+  --r1: 20px;
   /* padding Variables */
-  --pad0: 20px;
-  --pad1: 30px;
+  --pad0: 25px;
+  --pad1: 25px;
 
   /* Text Variables */
   --font: sans-serif;
   --hcolor: var(--c0);
-  --hmax: 60pt;
+  --hmax: 50pt;
   --hmin: 18pt;
 
 }
@@ -32,14 +32,14 @@
 [data-theme="light"] {
   --c0: var(--dark); 
   --c1: var(--dark2); 
-  --c2: var(--color); 
+  --c2: var(--accent); 
   --c3: var(--light2); 
   --c4: var(--light); 
 }
 [data-theme="dark"] {
   --c0: var(--light); 
   --c1: var(--light2); 
-  --c2: var(--color); 
+  --c2: var(--accent); 
   --c3: var(--dark2); 
   --c4: var(--dark);
 }
@@ -96,6 +96,7 @@ h3 {
 
 p {
   font-size: 12pt;
+  line-height: 18pt;
 }
 
 

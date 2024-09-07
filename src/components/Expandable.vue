@@ -30,7 +30,7 @@ const props = defineProps({
   }
 })
 
-const isExpanded = ref(true)
+const isExpanded = ref(false)
 
 const toggleExpand = () => {
   isExpanded.value = !isExpanded.value
@@ -82,6 +82,7 @@ const currentTitle = computed(() => {
 
 .toggle-icon {
   font-size: 0.8em;
+  color: var(--c2);
 }
 
 .expand-enter-active {

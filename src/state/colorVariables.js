@@ -3,9 +3,9 @@ import { ref, watch } from 'vue';
 const defaultColors = {
   dark: '#0f0f0f',
   dark2: '#404040',
-  color: '#819234',
+  accent: '#819234',
   light2: '#C0C0C0',
-  light: '#f9f9f9',
+  light: '#f6f5f4',
 };
 
 const colorVariables = ref(loadColors());

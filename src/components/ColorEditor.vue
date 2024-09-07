@@ -17,17 +17,16 @@ const filteredColorVariables = computed(() => {
   if (showAdvanced.value) {
     return colorVariables.value;
   } else {
-    const { dark, color, light } = colorVariables.value;
-    return { dark, color, light };
+    const { dark, accent, light } = colorVariables.value;
+    return { dark, accent, light };
   }
 });
 </script>
 
 <template>
-
-
   <div class="color-editor">
     <h3>Edit Color Variables</h3>
+    <p>Our color system is designed to ensure optimal contrast for interactive elements such as buttons, toggles, and links. This is achieved through the strategic use of an 'accent' color variable, which plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. It's an indicator of interaction.</p>
     <br>
     <div v-for="(color, key) in filteredColorVariables" :key="key" class="color-input">
       <label :for="key">{{ key }}:</label>
