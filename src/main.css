@@ -3,7 +3,6 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
 }
 
 :root {
@@ -22,12 +21,17 @@
   --pad1: 25px;
 
   /* Text Variables */
-  --font: sans-serif;
+  --font: monospace;
   --hcolor: var(--c0);
   --hmax: 50pt;
   --hmin: 18pt;
   --p: 14pt;
+  
 
+}
+/* elements inherit the font from their parent, overriding the browser's default font for form elements. */
+button, input, select, textarea {
+  font-family: inherit;
 }
 /* SET COLOR THEMES BASED ON COLOR VARIABLES */
 [data-theme="light"] {
@@ -115,7 +119,7 @@ button:hover{
   color: var(--c4);
   border: 1px solid var(--c2);
 }
-button-bold{
+button.bold{
   background-color: var(--c2);
   color: var(--c4);
   border: 1px solid var(--c2);
@@ -124,7 +128,7 @@ button-bold{
   border-radius: var(--r1);
   transition: 0.2s ease-in;
 }
-button-bold:hover{
+button.bold:hover{
   background-color: var(--c4);
   color: var(--c2);
   border: 1px solid var(--c2);

@@ -9,7 +9,7 @@ import { initTextVariables } from './state/textVariables';
 onMounted(() => {
   initTheme();
   initColorVariables();
-  initTextVariables();
+  // initTextVariables();
 });
 </script>
 
