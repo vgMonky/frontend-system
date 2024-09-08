@@ -17,10 +17,6 @@
   <Expandable title="Shape Editor" titleopen="Hide Shape Editor">
     <ShapeEditor/>
   </Expandable>
-
-  <Expandable title="Texture Editor" titleopen="Hide Texture Editor">
-
-  </Expandable>
 </template>
 
 <script setup>

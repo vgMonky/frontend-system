@@ -1,5 +1,8 @@
 <script setup>
+import { ref } from 'vue';
 import { textVariables, updateTextVariable, resetToDefaults } from '../state/textVariables';
+
+const showPreview = ref(false);
 
 const handleInputChange = (event, key) => {
   let value = event.target.value;
@@ -7,6 +10,10 @@ const handleInputChange = (event, key) => {
     value = `${value}pt`;
   }
   updateTextVariable(key, value);
+};
+
+const togglePreview = () => {
+  showPreview.value = !showPreview.value;
 };
 </script>
 
@@ -52,17 +59,21 @@ const handleInputChange = (event, key) => {
         @input="(event) => handleInputChange(event, 'hmin')"
       />
     </div>
+    <button @click="togglePreview">{{ showPreview ? 'Hide' : 'Show' }} Preview</button>
     <button @click="resetToDefaults">Reset to Defaults</button>
-    <h1>Headline h1</h1>
-    <p>Font and pt sizes will be defined here</p>
-    <br>
-    <br>
-    <h2>Headline h2</h2>
-    <p>This is a paragraph.</p>
-    <br>
-    <br>
-    <h3>Headline h3</h3>
-    <p>This is a paragraph.</p>
+
+    <div v-if="showPreview" class="preview">
+      <h1>Headline h1</h1>
+      <p>Font and pt sizes will be defined here</p>
+      <br>
+      <br>
+      <h2>Headline h2</h2>
+      <p>This is a paragraph.</p>
+      <br>
+      <br>
+      <h3>Headline h3</h3>
+      <p>This is a paragraph.</p>
+    </div>
   </div>
 </template>
 
@@ -81,5 +92,10 @@ label {
 }
 input[type="number"], select {
   width: 100px;
+}
+.preview {
+  margin-top: 20px;
+  border-top: 1px solid var(--c3);
+  padding-top: 20px;
 }
 </style>

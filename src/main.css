@@ -106,7 +106,7 @@ p {
 
 
 button{
-  background-color: var(--c4);
+  background-color: transparent;
   color: var(--c2);
   border: 1px solid var(--c2);
 
@@ -129,17 +129,7 @@ button.bold{
   transition: 0.2s ease-in;
 }
 button.bold:hover{
-  background-color: var(--c4);
+  background-color: transparent;
   color: var(--c2);
   border: 1px solid var(--c2);
-}
-
-
-/* instead of creating for example card components(whitch is some content with a container arround), just create all components uncontained with transparent background, and add the class=contained if it needs to be contained. This applays to whatever element> */
-.contained{
-  display: block;
-  background-color: var(--c4);
-  border: 1px solid var(--c3);
-  border-radius: var(--r0);
-  padding: var(--pad0) var(--pad1);
 }

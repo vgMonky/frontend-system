@@ -58,6 +58,7 @@ const currentTitle = computed(() => {
 }
 
 .content-container {
+  background-color: var(--c4);
   border: 1px solid var(--c3);
   border-radius: 0 0 var(--r0) var(--r0);
   border-top: none;
