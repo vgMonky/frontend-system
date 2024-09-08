@@ -3,7 +3,7 @@
     <h1>Style and Variables</h1>
     <p>In this section you can edit the whole style in a global way. Everithing edited here will be applyed live and will automaticly afect both light and dark theme.</p>
   </div>
-  <button-bold @click="toggleTheme">Toggle ☼ light/dark ☾</button-bold>
+  <button-bold @click="toggleTheme">Toggle Theme</button-bold>
   <br><br>
 
   <Expandable title="Color Editor" titleopen="Hide Color Editor">
@@ -16,6 +16,10 @@
 
   <Expandable title="Shape Editor" titleopen="Hide Shape Editor">
     <ShapeEditor/>
+  </Expandable>
+
+  <Expandable title="Texture Editor" titleopen="Hide Texture Editor">
+
   </Expandable>
 </template>
 
@@ -33,7 +37,6 @@ import { toggleTheme } from '@/state/theme';
   margin-bottom: 30px;
 }
 button-bold{
-  display: block;
-  max-width: 400px;
+  text-align: center;
 }
 </style>

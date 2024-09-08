@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { colorVariables, updateColorVariable, resetToDefaults } from '../state/colorVariables';
-import { toggleTheme } from '../state/theme';
 
 const showAdvanced = ref(false);
 
@@ -42,12 +41,17 @@ const filteredColorVariables = computed(() => {
         @input="(event) => handleColorChange(event, key)"
       />
     </div>
+    <br>
     <button @click="toggleAdvanced">{{ showAdvanced ? 'Hide Advanced' : 'Advanced Edit' }}</button>
     <button @click="resetToDefaults">Reset to Defaults</button>
   </div>
 </template>
 
 <style scoped>
+button {
+  margin-right: 10px;
+}
+
 .color-editor {
   margin-top: 20px;
 }

@@ -40,6 +40,8 @@ watch(isMenuOpen, (isOpen) => {
     <router-link to="/style" @click="closeMenu">Style</router-link>
     <router-link to="/components" @click="closeMenu">Components</router-link>
     <router-link to="/layouts" @click="closeMenu">Layouts</router-link>
+    <br>
+    <router-link to="/" @click="closeMenu">+ Create +</router-link>
   </div>
 </template>
 

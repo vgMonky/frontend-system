@@ -26,6 +26,7 @@
   --hcolor: var(--c0);
   --hmax: 50pt;
   --hmin: 18pt;
+  --p: 14pt;
 
 }
 /* SET COLOR THEMES BASED ON COLOR VARIABLES */
@@ -95,7 +96,7 @@ h3 {
 }
 
 p {
-  font-size: 12pt;
+  font-size: var(--p);
   line-height: 18pt;
 }
 
