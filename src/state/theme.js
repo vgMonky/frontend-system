@@ -1,6 +1,7 @@
 import { ref, watch } from 'vue';
+import { saveToLocal, loadFromLocal } from './saveLocal';
 
-const currentTheme = ref('light');
+const currentTheme = ref(loadFromLocal('theme', 'light'));
 
 const toggleTheme = () => {
   currentTheme.value = currentTheme.value === 'light' ? 'dark' : 'light';
@@ -9,12 +10,10 @@ const toggleTheme = () => {
 
 const updateTheme = () => {
   document.documentElement.setAttribute('data-theme', currentTheme.value);
-  localStorage.setItem('theme', currentTheme.value);
+  saveToLocal('theme', currentTheme.value);
 };
 
 const initTheme = () => {
-  const savedTheme = localStorage.getItem('theme');
-  currentTheme.value = savedTheme || 'light';
   updateTheme();
 };
 

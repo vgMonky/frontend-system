@@ -1,4 +1,5 @@
 import { ref, watch } from 'vue';
+import { saveToLocal, loadFromLocal } from './saveLocal';
 
 const defaultColors = {
   dark: '#0f0f0f',
@@ -8,16 +9,7 @@ const defaultColors = {
   light: '#f6f5f4',
 };
 
-const colorVariables = ref(loadColors());
-
-function loadColors() {
-  const savedColors = localStorage.getItem('colorVariables');
-  return savedColors ? JSON.parse(savedColors) : defaultColors;
-}
-
-function saveColors(colors) {
-  localStorage.setItem('colorVariables', JSON.stringify(colors));
-}
+const colorVariables = ref(loadFromLocal('colorVariables', defaultColors));
 
 const updateColorVariable = (key, value) => {
   colorVariables.value[key] = value;
@@ -27,7 +19,7 @@ watch(colorVariables, (newColors) => {
   Object.entries(newColors).forEach(([key, value]) => {
     document.documentElement.style.setProperty(`--${key}`, value);
   });
-  saveColors(newColors);
+  saveToLocal('colorVariables', newColors);
 }, { deep: true });
 
 const initColorVariables = () => {
@@ -38,7 +30,7 @@ const initColorVariables = () => {
 
 const resetToDefaults = () => {
   colorVariables.value = { ...defaultColors };
-  saveColors(defaultColors);
+  saveToLocal('colorVariables', defaultColors);
   initColorVariables();
 };
 

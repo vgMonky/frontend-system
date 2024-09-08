@@ -4,10 +4,12 @@ import NavBar from './components/NavBar.vue';
 import Menu from './components/Menu.vue';
 import { initTheme } from './state/theme';
 import { initColorVariables } from './state/colorVariables';
+import { initTextVariables } from './state/textVariables';
 
 onMounted(() => {
   initTheme();
   initColorVariables();
+  initTextVariables();
 });
 </script>
 
