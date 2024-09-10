@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { shapeVariables, updateShapeVariable, resetToDefaults } from '@/state/shapeVariables';
+import { shapeVariables, updateShapeVariable, resetToDefaults } from '@/components/StyleVariables/shapeVariables';
 
 const labels = {
   r0: 'Container Border Radius',

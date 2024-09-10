@@ -1,6 +1,6 @@
 <template>
   <div class="frontend-system-intro">
-    <p><em>This is live documentation to showcase, edit and use a generic UX UI design system + micro frontend components</em></p>
+    <p><em>*** This is live documentation to showcase, customize and use a generic UX UI design system + micro frontend components library build on top of it to mantain consistency</em></p>
     
     <h1>Frontend System Library</h1>
     
@@ -109,7 +109,7 @@
 </template>
 
 <script setup>
-import Expandable from '@/components/Expandable.vue';
+import Expandable from '../components/Expandable.vue';
 </script>
 
 <style scoped>

@@ -1,5 +1,6 @@
 <script setup>
-import { toggleMenu } from '../state/useMenu';
+import { toggleMenu } from './useMenu';
+import Menu from './Menu.vue';
 
 defineProps({
   title: {
@@ -23,6 +24,7 @@ defineProps({
       </svg>
     </button>
   </nav>
+  <Menu />
 </template>
 
 <style scoped>

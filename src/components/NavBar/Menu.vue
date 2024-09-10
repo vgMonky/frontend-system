@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue';
-import { isMenuOpen, closeMenu } from '../state/useMenu';
+import { isMenuOpen, closeMenu } from './useMenu';
 
 const menuRef = ref(null);
 

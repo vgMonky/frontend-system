@@ -25,7 +25,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { colorVariables, updateColorVariable, resetToDefaults } from '../state/colorVariables';
+import { colorVariables, updateColorVariable, resetToDefaults } from './colorVariables';
 
 const showAdvanced = ref(false);
 

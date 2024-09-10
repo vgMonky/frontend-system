@@ -66,7 +66,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { textVariables, updateTextVariable, resetToDefaults } from '../state/textVariables';
+import { textVariables, updateTextVariable, resetToDefaults } from './textVariables';
 
 const showPreview = ref(false);
 
