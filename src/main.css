@@ -73,8 +73,8 @@ h1 {
   
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad0);
-  margin-top: 20px;
-  margin-bottom: var(--pad0);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -84,8 +84,8 @@ h2 {
 
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad0);
-  margin-top: 20px;
-  margin-bottom: var(--pad0);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -95,15 +95,15 @@ h3 {
 
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad0);
-  margin-top: 20px;
-  margin-bottom: var(--pad0);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 h4 {
   font-size: var(--hmin);
   font-weight: 600;
   color: var(--hcolor);
-  margin-top: 20px;
-  margin-bottom: var(--pad0);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 p {
