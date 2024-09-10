@@ -47,7 +47,7 @@ const currentTitle = computed(() => {
 }
 
 .title-container {
-  border: 1px solid var(--c3);
+  border: 1px solid var(--c2);
   border-radius: var(--r0) var(--r0) 0 0;
   transition: 0.3s ease-out;
   padding: var(--pad0) var(--pad1);
@@ -66,6 +66,7 @@ const currentTitle = computed(() => {
 }
 
 .title {
+  color: var(--c2);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -76,14 +77,14 @@ const currentTitle = computed(() => {
 
 .title-container:hover{
   border-color: var(--c2);
+  background-color: var(--c2);
 }
 .title-container:hover .title{
-  color: var(--c2);
+  color: var(--c4);
 }
 
 .toggle-icon {
   font-size: 0.8em;
-  color: var(--c2);
 }
 
 .expand-enter-active {

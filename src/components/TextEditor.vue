@@ -1,67 +1,29 @@
-<script setup>
-import { ref } from 'vue';
-import { textVariables, updateTextVariable, resetToDefaults } from '../state/textVariables';
-
-const showPreview = ref(false);
-
-const handleInputChange = (event, key) => {
-  let value = event.target.value;
-  if (key !== 'font') {
-    value = `${value}pt`;
-  }
-  updateTextVariable(key, value);
-};
-
-const togglePreview = () => {
-  showPreview.value = !showPreview.value;
-};
-</script>
-
 <template>
   <div class="text-editor">
     <h3>Edit Text Variables</h3>
-    <div class="text-input">
-      <label for="p">Paragraph Size (pt):</label>
+    <div v-for="(value, key) in textVariables" :key="key" class="text-input">
+      <label :for="key">{{ getLabel(key) }}:</label>
       <input
-        id="p"
+        v-if="key !== 'font'"
+        :id="key"
         type="number"
-        :value="parseInt(textVariables.p)"
-        @input="(event) => handleInputChange(event, 'p')"
+        :value="parseInt(value)"
+        @input="(event) => handleInputChange(event, key)"
       />
-    </div>
-    <div class="text-input">
-      <label for="font">Font Family:</label>
       <select
-        id="font"
-        :value="textVariables.font"
-        @change="(event) => handleInputChange(event, 'font')"
+        v-else
+        :id="key"
+        :value="value"
+        @change="(event) => handleInputChange(event, key)"
       >
         <option value="sans-serif">Sans-serif</option>
         <option value="serif">Serif</option>
         <option value="monospace">Monospace</option>
       </select>
-    </div>
-    <div class="text-input">
-      <label for="hmax">Max Heading Size (pt):</label>
-      <input
-        id="hmax"
-        type="number"
-        :value="parseInt(textVariables.hmax)"
-        @input="(event) => handleInputChange(event, 'hmax')"
-      />
-    </div>
-    <div class="text-input">
-      <label for="hmin">Min Heading Size (pt):</label>
-      <input
-        id="hmin"
-        type="number"
-        :value="parseInt(textVariables.hmin)"
-        @input="(event) => handleInputChange(event, 'hmin')"
-      />
+      <span v-if="key !== 'font'">pt</span>
     </div>
     <button @click="togglePreview">{{ showPreview ? 'Hide' : 'Show' }} Preview</button>
     <button @click="resetToDefaults">Reset to Defaults</button>
-
     <div v-if="showPreview" class="preview">
       <h1>Headline h1</h1>
       <p>Font and pt sizes will be defined here</p>
@@ -73,9 +35,42 @@ const togglePreview = () => {
       <br>
       <h3>Headline h3</h3>
       <p>This is a paragraph.</p>
+      <br>
+      <br>
+      <h4>Headline h4</h4>
+      <p>This is a paragraph.</p>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import { textVariables, updateTextVariable, resetToDefaults } from '../state/textVariables';
+
+const showPreview = ref(false);
+
+const labels = {
+  p: 'Paragraph Size',
+  font: 'Font Family',
+  hmax: 'Max Heading Size',
+  hmin: 'Min Heading Size'
+};
+
+const getLabel = (key) => labels[key] || key;
+
+const handleInputChange = (event, key) => {
+  let value = event.target.value;
+  if (key !== 'font') {
+    const intValue = Math.max(0, parseInt(value) || 0);
+    value = `${intValue}pt`;
+  }
+  updateTextVariable(key, value);
+};
+
+const togglePreview = () => {
+  showPreview.value = !showPreview.value;
+};
+</script>
 
 <style scoped>
 .text-editor {
@@ -92,10 +87,14 @@ label {
 }
 input[type="number"], select {
   width: 100px;
+  margin-right: 5px;
 }
 .preview {
   margin-top: 20px;
   border-top: 1px solid var(--c3);
   padding-top: 20px;
+}
+button {
+  margin-right: 10px;
 }
 </style>

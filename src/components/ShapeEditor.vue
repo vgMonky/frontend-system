@@ -1,33 +1,56 @@
 <template>
-    <h3>Edit Border Variables</h3>
-    <input></input><br>
-    <input></input><br>
+    <h3>Edit Shape Variables</h3>
+    <p>Adjust the shape variables to change the appearance of elements throughout the site.</p>
+    <div v-for="(value, key) in shapeVariables" :key="key" class="input-group">
+      <label :for="key">{{ getLabel(key) }}:</label>
+      <input 
+        :id="key" 
+        type="number" 
+        :value="parseInt(value)"
+        @input="updateVariable(key, $event.target.value)"
+      >
+      <span>px</span>
+    </div>
     <br>
-    <h3>Edit Padding Variables</h3>
-    <input></input><br>
-    <input></input><br>
-    <br>
-    <button>button</button>
-    <div class="contained textbox ">Some text for my textbox.</div>
-    <div class="box">This is my box with some text, it has 200px width.   </div>
-    <div class="contained">Some contained content</div>
-</template>
-
-<script setup>
-
-</script>
-
-<style scoped>
-.box{
+    <button @click="resetToDefaults">Reset to Defaults</button>
+    
+  </template>
+  
+  <script setup>
+  import { shapeVariables, updateShapeVariable, resetToDefaults } from '@/state/shapeVariables';
+  
+  const labels = {
+    r0: 'Container Border Radius',
+    r1: 'Button Border Radius',
+    pad0: 'Vertical Padding',
+    pad1: 'Horizontal Padding'
+  };
+  
+  const getLabel = (key) => labels[key] || key;
+  
+  const updateVariable = (key, value) => {
+    // Ensure the value is a positive integer
+    const intValue = Math.max(0, parseInt(value) || 0);
+    updateShapeVariable(key, `${intValue}px`);
+  };
+  </script>
+  
+  <style scoped>
+  .input-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  label {
     display: inline-block;
-    width: 200px;
-    padding: var(--pad0) var(--pad1);
-    border: 1px solid var(--c3);
-    border-radius: var(--r0);
-}
-
-.textbox{
-    display: inline-block;
-}
-
-</style>
+    width: 150px;
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    margin-right: 5px;
+  }
+  
+  </style>

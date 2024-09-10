@@ -5,17 +5,20 @@ import Menu from './components/Menu.vue';
 import { initTheme } from './state/theme';
 import { initColorVariables } from './state/colorVariables';
 import { initTextVariables } from './state/textVariables';
+import { initShapeVariables } from './state/shapeVariables';
 
 onMounted(() => {
   initTheme();
   initColorVariables();
-  // initTextVariables();
+  initTextVariables();
+  initShapeVariables();
+  
 });
 </script>
 
 <template>
   <div class="app-container">
-    <NavBar title="Frontend System" />
+    <NavBar title="Frontend System Library" />
     <Menu />
     <main class="main-content">
       <router-view></router-view>

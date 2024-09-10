@@ -13,10 +13,9 @@
   --light2: #C0C0C0; 
   --light: #f6f5f4;
 
-  /* Radius Variable */
+  /* shape Variable */
   --r0: 5px;
   --r1: 20px;
-  /* padding Variables */
   --pad0: 25px;
   --pad1: 25px;
 
@@ -95,6 +94,13 @@ h3 {
 
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad0);
+  margin-top: 20px;
+  margin-bottom: var(--pad0);
+}
+h4 {
+  font-size: var(--hmin);
+  font-weight: 600;
+  color: var(--hcolor);
   margin-top: 20px;
   margin-bottom: var(--pad0);
 }
