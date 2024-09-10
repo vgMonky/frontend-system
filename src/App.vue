@@ -17,14 +17,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app-container">
-    <NavBar title="Frontend System Library" />
-    <Menu />
-    <main class="main-content">
-      <router-view></router-view>
-    </main>
-    
-  </div>
+  <NavBar title="Frontend System Library" />
+  <Menu />
+  <main class="main-content">
+    <router-view></router-view>
+  </main>
 </template>
 
 <style>

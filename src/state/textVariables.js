@@ -2,10 +2,11 @@ import { ref, watch } from 'vue';
 import { saveToLocal, loadFromLocal } from './saveLocal';
 
 const defaultTextVariables = {
+  font: 'sans-serif',
   hmax: '50pt',
   hmin: '18pt',
   p: '12pt',
-  font: 'sans-serif'
+  ps: '9pt'
 };
 
 const textVariables = ref(loadFromLocal('textVariables', defaultTextVariables));

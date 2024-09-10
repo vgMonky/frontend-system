@@ -1,29 +1,48 @@
 <template>
   <div class="text-editor">
     <h3>Edit Text Variables</h3>
-    <div v-for="(value, key) in textVariables" :key="key" class="text-input">
-      <label :for="key">{{ getLabel(key) }}:</label>
-      <input
-        v-if="key !== 'font'"
-        :id="key"
-        type="number"
-        :value="parseInt(value)"
-        @input="(event) => handleInputChange(event, key)"
-      />
+    
+    <!-- Font selection at the top -->
+    <div class="text-input">
+      <p class="lable" for="font">{{ getLabel('font') }}:</p>
       <select
-        v-else
-        :id="key"
-        :value="value"
-        @change="(event) => handleInputChange(event, key)"
+        id="font"
+        :value="textVariables.font"
+        @change="(event) => handleInputChange(event, 'font')"
       >
         <option value="sans-serif">Sans-serif</option>
         <option value="serif">Serif</option>
         <option value="monospace">Monospace</option>
       </select>
-      <span v-if="key !== 'font'">pt</span>
     </div>
+
+    <!-- Heading sizes -->
+    <div v-for="key in ['hmax', 'hmin']" :key="key" class="text-input">
+      <p class="lable" :for="key">{{ getLabel(key) }}:</p>
+      <input
+        :id="key"
+        type="number"
+        :value="parseInt(textVariables[key])"
+        @input="(event) => handleInputChange(event, key)"
+      />
+      <p >pt</p>
+    </div>
+
+    <!-- Paragraph sizes at the bottom -->
+    <div v-for="key in ['p', 'ps']" :key="key" class="text-input">
+      <p class="lable" :for="key">{{ getLabel(key) }}:</p>
+      <input
+        :id="key"
+        type="number"
+        :value="parseInt(textVariables[key])"
+        @input="(event) => handleInputChange(event, key)"
+      />
+      <p>pt</p>
+    </div>
+
     <button @click="togglePreview">{{ showPreview ? 'Hide' : 'Show' }} Preview</button>
     <button @click="resetToDefaults">Reset to Defaults</button>
+    
     <div v-if="showPreview" class="preview">
       <h1>Headline h1</h1>
       <p>Font and pt sizes will be defined here</p>
@@ -39,6 +58,8 @@
       <br>
       <h4>Headline h4</h4>
       <p>This is a paragraph.</p>
+      <br>
+      <p class="ps">This is small paragraph using the --ps variable.</p>
     </div>
   </div>
 </template>
@@ -50,10 +71,11 @@ import { textVariables, updateTextVariable, resetToDefaults } from '../state/tex
 const showPreview = ref(false);
 
 const labels = {
-  p: 'Paragraph Size',
   font: 'Font Family',
   hmax: 'Max Heading Size',
-  hmin: 'Min Heading Size'
+  hmin: 'Min Heading Size',
+  p: 'Paragraph Size',
+  ps: 'Small Text Size'
 };
 
 const getLabel = (key) => labels[key] || key;
@@ -81,9 +103,10 @@ const togglePreview = () => {
   align-items: center;
   margin-bottom: 10px;
 }
-label {
-  width: 150px;
+.lable {
+  width: 200px;
   margin-right: 10px;
+  margin-bottom: 6px;
 }
 input[type="number"], select {
   width: 100px;
