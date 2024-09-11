@@ -1,34 +1,40 @@
 <template>
   <div class="color-editor">
     <h3>Edit Color Variables</h3>
-    <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. It's an indicator of interaction.</p>
+    <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. Look around! It's an indicator of interaction.</p>
     <br>
-    <div v-for="(color, key) in filteredColorVariables" :key="key" class="text-input">
-      <p class="lable" :for="key">{{ key }}:</p>
-      <input
-        :id="key"
-        type="color"
-        :value="color"
-        @input="(event) => handleColorChange(event, key)"
-      />
-      <input
-        type="text"
-        :value="color"
-        @input="(event) => handleColorChange(event, key)"
-      />
+    <div class="contained">
+      <BtnIcon 
+      :icon="showAdvanced ? hideIcon : showIcon" 
+      :text="showAdvanced ? 'Hide Advanced' : 'Advanced Edit'"
+      @click="toggleAdvanced"
+    />
+      <div v-for="(color, key) in filteredColorVariables" :key="key" class="text-input">
+        <p class="lable" :for="key">{{ key }}:</p>
+        <input
+          :id="key"
+          type="color"
+          :value="color"
+          @input="(event) => handleColorChange(event, key)"
+        />
+        <input
+          type="text"
+          :value="color"
+          @input="(event) => handleColorChange(event, key)"
+        />
+      </div>
+      <br>
+      <button class="contained" @click="resetToDefaults">Reset to Defaults</button>
     </div>
-    <br>
-    <button @click="toggleAdvanced">{{ showAdvanced ? 'Hide Advanced' : 'Advanced Edit' }}</button>
-    <button @click="resetToDefaults">Reset to Defaults</button>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue';
 import { colorVariables, updateColorVariable, resetToDefaults } from './colorVariables';
+import BtnIcon from '../BtnIcon.vue';
 
 const showAdvanced = ref(false);
-
 const toggleAdvanced = () => {
   showAdvanced.value = !showAdvanced.value;
 };
@@ -45,6 +51,14 @@ const filteredColorVariables = computed(() => {
     return { dark, accent, light };
   }
 });
+
+const showIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+const hideIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
 </script>
 
 <style scoped>

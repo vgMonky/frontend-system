@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <NavBar title="Frontend System Library" />
+  <NavBar title="Micro Frontend System Library" />
   <main>
     <router-view class="main-content"></router-view>
   </main>

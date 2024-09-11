@@ -12,7 +12,7 @@
     <p>px</p>
   </div>
   <br>
-  <button @click="resetToDefaults">Reset to Defaults</button>
+  <button class="contained" @click="resetToDefaults">Reset to Defaults</button>
 </template>
 
 <script setup>
@@ -21,8 +21,7 @@ import { shapeVariables, updateShapeVariable, resetToDefaults } from '@/componen
 const labels = {
   r0: 'Container Border Radius',
   r1: 'Button Border Radius',
-  pad0: 'Vertical Padding',
-  pad1: 'Horizontal Padding'
+  pad: 'Padding',
 };
 
 const getLabel = (key) => labels[key] || key;

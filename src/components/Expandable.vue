@@ -50,7 +50,7 @@ const currentTitle = computed(() => {
   border: 1px solid var(--c2);
   border-radius: var(--r0) var(--r0) 0 0;
   transition: 0.3s ease-out;
-  padding: var(--pad0) var(--pad1);
+  padding: var(--pad) var(--pad);
 }
 
 .title-container.closed {
@@ -62,7 +62,7 @@ const currentTitle = computed(() => {
   border: 1px solid var(--c3);
   border-radius: 0 0 var(--r0) var(--r0);
   border-top: none;
-  padding: var(--pad0) var(--pad1);
+  padding: var(--pad) var(--pad);
 }
 
 .title {

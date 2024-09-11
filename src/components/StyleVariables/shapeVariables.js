@@ -4,8 +4,7 @@ import { saveToLocal, loadFromLocal } from './saveLocal';
 const defaultShapeVariables = {
   r0: '5px',
   r1: '20px',
-  pad0: '25px',
-  pad1: '25px',
+  pad: '25px',
 };
 
 const shapeVariables = ref(loadFromLocal('shapeVariables', defaultShapeVariables));

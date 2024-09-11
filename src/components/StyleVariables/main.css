@@ -17,8 +17,7 @@
   /* shape Variable */
   --r0: 5px;
   --r1: 20px;
-  --pad0: 25px;
-  --pad1: 25px;
+  --pad: 25px;
 
   /* Text Variables */
   --font: monospace;
@@ -72,7 +71,7 @@ h1 {
   color: var(--hcolor);
   
   border-bottom: 1px solid var(--c3);
-  padding-bottom: var(--pad0);
+  padding-bottom: var(--pad);
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -83,7 +82,7 @@ h2 {
   color: var(--hcolor);
 
   border-bottom: 1px solid var(--c3);
-  padding-bottom: var(--pad0);
+  padding-bottom: var(--pad);
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -94,7 +93,7 @@ h3 {
   color: var(--hcolor);
 
   border-bottom: 1px solid var(--c3);
-  padding-bottom: var(--pad0);
+  padding-bottom: var(--pad);
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -116,30 +115,43 @@ p {
 
 
 button{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  /* this repeats */
   background-color: transparent;
   color: var(--c2);
-  border: 1px solid var(--c2);
-
-  padding: 10px 20px;
-  border-radius: var(--r1);
-  transition: 0.2s ease-in;
+  border: 1px solid transparent;
 }
 button:hover{
-  background-color: var(--c2);
-  color: var(--c4);
-  border: 1px solid var(--c2);
+  text-decoration: underline;
 }
-button.bold{
-  background-color: var(--c2);
-  color: var(--c4);
+button.contained{
   border: 1px solid var(--c2);
-
   padding: 10px 20px;
   border-radius: var(--r1);
-  transition: 0.2s ease-in;
 }
-button.bold:hover{
+button.contained:hover{
+  background-color: var(--c2);
+  color: var(--c4);
+  border: 1px solid var(--c2);
+  text-decoration: none;
+}
+button.contained.bold{
+  background-color: var(--c2);
+  color: var(--c4);
+  border: 1px solid var(--c2);
+}
+button.contained.bold:hover{
   background-color: transparent;
   color: var(--c2);
   border: 1px solid var(--c2);
+
+}
+
+.contained{
+  border: 1px solid var(--c3);
+  padding: var(--pad) var(--pad);
+  border-radius: var(--r0);
 }
