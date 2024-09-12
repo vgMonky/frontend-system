@@ -72,7 +72,7 @@
 <script setup>
 import { ref } from 'vue';
 import { textVariables, updateTextVariable, resetToDefaults } from './textVariables';
-import BtnIcon from '../BtnIcon.vue';
+import BtnIcon from '../../components/BtnIcon.vue';
 
 const showPreview = ref(false);
 

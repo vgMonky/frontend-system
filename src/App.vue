@@ -1,11 +1,11 @@
 <script setup>
 import { onMounted } from 'vue';
-import NavBar from './components/NavBar/NavBar.vue';
+import NavBar from './feature_modules/NavBar/NavBar.vue';
 
-import { initTheme } from './components/StyleVariables/theme';
-import { initColorVariables } from './components/StyleVariables/colorVariables';
-import { initTextVariables } from './components/StyleVariables/textVariables';
-import { initShapeVariables } from './components/StyleVariables/shapeVariables';
+import { initTheme } from './feature_modules/StyleVariables/theme';
+import { initColorVariables } from './feature_modules/StyleVariables/colorVariables';
+import { initTextVariables } from './feature_modules/StyleVariables/textVariables';
+import { initShapeVariables } from './feature_modules/StyleVariables/shapeVariables';
 
 onMounted(() => {
   initTheme();
@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <NavBar title="Micro Frontend System Library" />
+  <NavBar title="UI Component Library" />
   <main>
     <router-view class="main-content"></router-view>
   </main>

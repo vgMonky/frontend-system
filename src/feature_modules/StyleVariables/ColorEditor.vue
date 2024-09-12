@@ -32,7 +32,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { colorVariables, updateColorVariable, resetToDefaults } from './colorVariables';
-import BtnIcon from '../BtnIcon.vue';
+import BtnIcon from '../../components/BtnIcon.vue';
 
 const showAdvanced = ref(false);
 const toggleAdvanced = () => {
