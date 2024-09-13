@@ -3,6 +3,10 @@
     <button class="contained bold" @click="toggleEdit">
       {{ isEditMode ? 'Turn Off Edit Mode' : 'Turn On Edit Mode' }}
     </button>
+    <br>
+    <p>Page Title:</p>
+    <p>Contact Link:</p>
+    <p>Contact Phone:</p>
   </template>
   
   <script setup>
