@@ -10,7 +10,7 @@ const createRoutes = (views, isBase = false) => {
     const order = match[1] ? parseInt(match[1]) : Infinity
     const name = match[2]
     return {
-      path: name.toLowerCase() === 'intro' ? '/' : `/${name.toLowerCase()}`,
+      path: `/${name.toLowerCase()}`,
       name,
       component,
       meta: { isBase, order }
@@ -21,7 +21,20 @@ const createRoutes = (views, isBase = false) => {
 const baseRoutes = createRoutes(baseViews, true)
 const customRoutes = createRoutes(customViews)
 
-const routes = [...baseRoutes, ...customRoutes]
+// Sort custom routes by order, then by name
+const sortedCustomRoutes = customRoutes.sort((a, b) => {
+  if (a.meta.order !== b.meta.order) {
+    return a.meta.order - b.meta.order
+  }
+  return a.name.localeCompare(b.name)
+})
+
+// Set the first custom route's path to "/"
+if (sortedCustomRoutes.length > 0) {
+  sortedCustomRoutes[0].path = "/"
+}
+
+const routes = [...baseRoutes, ...sortedCustomRoutes]
 
 const router = createRouter({
   history: createWebHistory(),

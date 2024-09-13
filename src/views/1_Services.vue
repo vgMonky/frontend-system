@@ -1,7 +1,7 @@
 <template>
-    <h1>new_view</h1>
+    <h1>Services</h1>
     <br>
-    <p>x</p>
+    <p>This are services</p>
 </template>
 
 <script setup>
