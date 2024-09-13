@@ -1,5 +1,5 @@
 <script setup>
-import { toggleMenu } from './useMenu';
+import { toggleMenu } from './toggleMenu';
 import Menu from './Menu.vue';
 
 defineProps({

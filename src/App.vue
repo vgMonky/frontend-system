@@ -1,11 +1,12 @@
 <script setup>
 import { onMounted } from 'vue';
-import NavBar from './feature_modules/Navegation/NavBar.vue';
+import NavBar from './feature_modules/Navigation/NavBar.vue';
 
 import { initTheme } from './feature_modules/StyleVariables/theme';
 import { initColorVariables } from './feature_modules/StyleVariables/colorVariables';
 import { initTextVariables } from './feature_modules/StyleVariables/textVariables';
 import { initShapeVariables } from './feature_modules/StyleVariables/shapeVariables';
+import { useViewWatcher } from './feature_modules/Navigation/viewWatcher'
 
 onMounted(() => {
   initTheme();
@@ -13,6 +14,10 @@ onMounted(() => {
   initTextVariables();
   initShapeVariables();
 });
+
+
+// Initialize the view watcher
+useViewWatcher()
 </script>
 
 <template>
