@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const baseViews = import.meta.glob('../views/base/*.vue')
-const customViews = import.meta.glob('../views/*.vue')
+const baseViews = import.meta.glob('@/views/base/*.vue')
+const customViews = import.meta.glob('@/views/*.vue')
 
 const createRoutes = (views, isBase = false) => {
   return Object.entries(views).map(([path, component]) => {

@@ -1,12 +1,11 @@
 <script setup>
 import { onMounted } from 'vue';
-import NavBar from './feature_modules/Navigation/NavBar.vue';
+import Navigation from './feature_modules/Navigation/Navigation.vue';
 
 import { initTheme } from './feature_modules/StyleVariables/theme';
 import { initColorVariables } from './feature_modules/StyleVariables/colorVariables';
 import { initTextVariables } from './feature_modules/StyleVariables/textVariables';
 import { initShapeVariables } from './feature_modules/StyleVariables/shapeVariables';
-import { useViewWatcher } from './feature_modules/Navigation/viewWatcher'
 
 onMounted(() => {
   initTheme();
@@ -14,25 +13,12 @@ onMounted(() => {
   initTextVariables();
   initShapeVariables();
 });
-
-
-// Initialize the view watcher
-useViewWatcher()
 </script>
 
 <template>
-  <NavBar title="Frontend System" />
-  <main>
-    <router-view class="main-content"></router-view>
-  </main>
+  <Navigation />
 </template>
 
 <style>
-main {
-  padding-top: 80px;
-  margin: 40px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+/* Any global styles can remain here */
 </style>

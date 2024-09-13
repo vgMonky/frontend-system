@@ -56,8 +56,8 @@ const toggleCreateInfo = () => {
     <br>
     <button @click="toggleCreateInfo">+ Create +</button>
     <div v-if="showCreateInfo" class="create-info">
-      <p class="ps">To add a new view, create a new .vue file in src/feature_modules/Navigation/views/newfile.vue or set an index to order them if you have many files:</p>
-      <p class="ps contained">E.g. views/1_firstfile.vue</p>
+      <p class="ps">To add a new view, create a new .vue file in src/views/newfile.vue or set an index to order them if you have many files:</p>
+      <p class="ps contained">E.g. src/views/1_firstfile.vue</p>
     </div>
     <br>
     <router-link v-for="item in customMenuItems" :key="item.path" :to="item.path">
