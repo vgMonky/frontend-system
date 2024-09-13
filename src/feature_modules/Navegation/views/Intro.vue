@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import Expandable from '../components/Expandable.vue';
+import Expandable from '@/components/Expandable.vue';
 </script>
 
 <style scoped>

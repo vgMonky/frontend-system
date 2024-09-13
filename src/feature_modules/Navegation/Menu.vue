@@ -36,12 +36,12 @@ watch(isMenuOpen, (isOpen) => {
 
 <template>
   <div :class="menuClass" ref="menuRef">
-    <router-link to="/" @click="closeMenu">Intro</router-link>
-    <router-link to="/style" @click="closeMenu">Style</router-link>
-    <router-link to="/components" @click="closeMenu">Components</router-link>
-    <router-link to="/layouts" @click="closeMenu">Layouts</router-link>
+    <router-link to="/" >Intro</router-link>
+    <router-link to="/style" >Style</router-link>
+    <router-link to="/components" >Components</router-link>
+    <router-link to="/layouts" >Layouts</router-link>
     <br>
-    <router-link to="/" @click="closeMenu">+ Create +</router-link>
+    <button>+ Create +</button>
   </div>
 </template>
 

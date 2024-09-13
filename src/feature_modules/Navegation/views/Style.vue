@@ -20,11 +20,11 @@
 </template>
 
 <script setup>
-import TextEditor from '../feature_modules/StyleVariables/TextEditor.vue';
-import ColorEditor from '../feature_modules/StyleVariables/ColorEditor.vue';
-import ShapeEditor from '../feature_modules/StyleVariables/ShapeEditor.vue';
-import Expandable from '../components/Expandable.vue';
-import { toggleTheme } from '../feature_modules/StyleVariables/theme';
+import TextEditor from '@/feature_modules/StyleVariables/TextEditor.vue';
+import ColorEditor from '@/feature_modules/StyleVariables/ColorEditor.vue';
+import ShapeEditor from '@/feature_modules/StyleVariables/ShapeEditor.vue';
+import Expandable from '@/components/Expandable.vue';
+import { toggleTheme } from '@/feature_modules/StyleVariables/theme';
 
 </script>
 

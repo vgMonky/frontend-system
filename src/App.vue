@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue';
-import NavBar from './feature_modules/NavBar/NavBar.vue';
+import NavBar from './feature_modules/Navegation/NavBar.vue';
 
 import { initTheme } from './feature_modules/StyleVariables/theme';
 import { initColorVariables } from './feature_modules/StyleVariables/colorVariables';
@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <NavBar title="UI Component Library" />
+  <NavBar title="Frontend System" />
   <main>
     <router-view class="main-content"></router-view>
   </main>
