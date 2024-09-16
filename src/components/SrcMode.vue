@@ -42,6 +42,7 @@
   
   .source-code {
     background-color: var(--c3);
+    border-radius: var(--r0);
     padding: 16px;
     overflow-x: auto;  /* This enables horizontal scrolling */
     white-space: nowrap;  /* Prevents line wrapping */
