@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const isEditMode = ref(false)
+const isEditMode = ref(true)
 
 export function toggleEditMode() {
   isEditMode.value = !isEditMode.value

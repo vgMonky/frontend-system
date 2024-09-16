@@ -4,11 +4,12 @@
     <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. Look around! It's an indicator of interaction.</p>
     <br>
     <div class="contained">
-      <BtnIcon 
-      :icon="showAdvanced ? hideIcon : showIcon" 
-      :text="showAdvanced ? 'Hide Advanced' : 'Advanced Edit'"
-      @click="toggleAdvanced"
-    />
+
+      <button @click="toggleAdvanced">
+        <component :is="showAdvanced ? Minus : Plus" />
+        {{ showAdvanced ? 'Hide Advanced' : 'Show Advanced'}}
+      </button>
+
       <div v-for="(color, key) in filteredColorVariables" :key="key" class="text-input">
         <p class="lable" :for="key">{{ key }}:</p>
         <input
@@ -32,7 +33,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { colorVariables, updateColorVariable, resetToDefaults } from './colorVariables';
-import BtnIcon from '../../components/BtnIcon.vue';
+import { Plus, Minus } from 'lucide-vue-next';
 
 const showAdvanced = ref(false);
 const toggleAdvanced = () => {
@@ -51,14 +52,6 @@ const filteredColorVariables = computed(() => {
     return { dark, accent, light };
   }
 });
-
-const showIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
-
-const hideIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
 </script>
 
 <style scoped>
@@ -83,6 +76,6 @@ input[type="text"] {
   margin-right: 5px;
 }
 button {
-  margin-right: 10px;
+  margin-bottom: 15px;
 }
 </style>

@@ -42,12 +42,12 @@
       <button class="contained" @click="resetToDefaults">Reset to Defaults</button>
     </div>
     <br>
-    <BtnIcon 
-      class=""
-      :icon="showPreview ? hideIcon : showIcon"
-      :text="showPreview ? 'Hide Preview' : 'Show Preview'"
-      @click="togglePreview"
-    />
+    
+    <button @click="togglePreview">
+      <component :is="showPreview ? ChevronDown : ChevronRight" />
+      {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
+    </button>
+
     <div v-if="showPreview" class="preview">
       <h1>Headline h1</h1>
       <p>Font and pt sizes will be defined here</p>
@@ -72,9 +72,15 @@
 <script setup>
 import { ref } from 'vue';
 import { textVariables, updateTextVariable, resetToDefaults } from './textVariables';
-import BtnIcon from '../../components/BtnIcon.vue';
+import { ChevronRight, ChevronDown } from 'lucide-vue-next';
+
 
 const showPreview = ref(false);
+
+const togglePreview = () => {
+  showPreview.value = !showPreview.value;
+}
+
 
 const labels = {
   font: 'Font Family',
@@ -95,17 +101,7 @@ const handleInputChange = (event, key) => {
   updateTextVariable(key, value);
 };
 
-const togglePreview = () => {
-  showPreview.value = !showPreview.value;
-};
 
-const showIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
-
-const hideIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
 </script>
 
 <style scoped>
