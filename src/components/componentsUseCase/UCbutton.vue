@@ -3,9 +3,7 @@
     <p>Button element can be used with out class, contained class or contained blod class, based on the level of importance/accent.</p>
     <div class="contained">
         <button>Normal</button>
-        <br>
         <button class="contained">Contained</button>
-        <br>
         <button class="contained bold">Contained Bold</button>
     </div>
     <br>
@@ -15,12 +13,10 @@
         <RefreshCcw />
         button with icon
         </button>
-        <br>
         <button class="contained" >
         <RefreshCcw />
         button with icon
         </button>
-        <br>
         <button class="contained bold">
         <RefreshCcw />
         button with icon
@@ -33,12 +29,10 @@
         <component :is="showPreview ? ChevronDown : ChevronRight" />
         {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
         </button>
-        <br>
         <button class="contained " @click="togglePreview">
         <component :is="showPreview ? ChevronDown : ChevronRight" />
         {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
         </button>
-        <br>
         <button class="contained bold" @click="togglePreview">
         <component :is="showPreview ? ChevronDown : ChevronRight" />
         {{ showPreview ? 'Hide Preview' : 'Show Preview'}}

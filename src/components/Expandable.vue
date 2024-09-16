@@ -55,6 +55,7 @@ const currentTitle = computed(() => {
 
 .title-container.closed {
   border-radius: var(--r0);
+  box-shadow: var(--sh);
 }
 
 .content-container {
@@ -63,6 +64,7 @@ const currentTitle = computed(() => {
   border-radius: 0 0 var(--r0) var(--r0);
   border-top: none;
   padding: var(--pad) var(--pad);
+  box-shadow: var(--sh);
 }
 
 .title {
