@@ -162,7 +162,6 @@ textarea {
   background-color: color-mix(in srgb, var(--c3) 30%, transparent);
   color: var(--c0);
   border: 1px solid var(--c2);
-  border-radius: var(--r0);
   padding: 5px;
   font-size: var(--p);
 }
@@ -199,7 +198,7 @@ textarea {
 
 /* Color input styles */
 input[type="color"] {
-  padding: 0;
+  padding: 2;
   width: 40px;
   height: 40px;
 }
