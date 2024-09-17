@@ -1,5 +1,5 @@
 <template>
-    <h3>Toggle Component</h3>
+    <h2>Toggle Component</h2>
     <p>The Toggle Component is a customizable switch that allows users to toggle between two states.</p>
     <br>
     <Toggle v-model="isOnline" :icon="toggleIcon" />

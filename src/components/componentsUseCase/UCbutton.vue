@@ -1,5 +1,5 @@
 <template>
-    <h3>Button element</h3>
+    <h2>Button element</h2>
     <p>Button element can be used with out class, contained class or contained bold class, based on the level of importance/accent.</p>
     <div class="contained">
         <button>Normal</button>

@@ -1,5 +1,5 @@
 <template>
-    <h3>Expandable Component</h3>
+    <h2>Expandable Component</h2>
     <p>The Expandable Component is ....</p>
     <br>
     
