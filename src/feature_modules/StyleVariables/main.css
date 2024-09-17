@@ -151,6 +151,88 @@ button.contained.bold:hover{
   border: 1px solid var(--c2);
 }
 
+
+
+
+
+/* Styles for all input elements */
+input,
+select,
+textarea {
+  background-color: color-mix(in srgb, var(--c3) 30%, transparent);
+  color: var(--c0);
+  border: 1px solid var(--c2);
+  border-radius: var(--r0);
+  padding: 5px;
+  font-size: var(--p);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--c2);
+  outline-offset: -1px;
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+  color: var(--c1);
+  opacity: 0.7;
+}
+
+/* Checkbox and Radio button styles */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--c2);
+}
+
+/* Select dropdown styles */
+select {
+  padding-right: 20px;
+}
+
+/* Textarea styles */
+textarea {
+  resize: vertical;
+}
+
+/* Color input styles */
+input[type="color"] {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+/* Range input (slider) styles */
+input[type="range"] {
+  accent-color: var(--c2);
+}
+
+/* File input styles */
+input[type="file"]::file-selector-button {
+  background-color: var(--c2);
+  color: var(--c4);
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--r0);
+  cursor: pointer;
+}
+
+/* Disabled input styles */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
 .contained{
   border: 1px solid var(--c3);
   padding: var(--pad) var(--pad);

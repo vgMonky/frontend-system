@@ -76,7 +76,6 @@ import { ChevronRight, ChevronDown, RefreshCcw } from 'lucide-vue-next';
 
 
 const showPreview = ref(false);
-
 const togglePreview = () => {
   showPreview.value = !showPreview.value;
 }
@@ -119,7 +118,7 @@ const handleInputChange = (event, key) => {
   margin-bottom: 6px;
 }
 input[type="number"], select {
-  width: 100px;
+  width: 140px;
   margin-right: 5px;
 }
 .preview {

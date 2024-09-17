@@ -3,7 +3,10 @@
     <h1>Style and Variables</h1>
     <p>In this section you can edit the whole style in a global way. Everithing edited here will be applyed live and will automaticly afect both light and dark theme.</p>
   </div>
-  <button class="contained bold" @click="toggleTheme">Toggle Theme</button>
+  <div class="contained">
+    <p>Toggle Between Themes...</p><br>
+    <ToggleTheme />
+  </div>
   <br><br>
   
   <Expandable title="Color Editor" titleopen="Hide Color Editor">
@@ -24,7 +27,7 @@ import TextEditor from '@/feature_modules/StyleVariables/TextEditor.vue';
 import ColorEditor from '@/feature_modules/StyleVariables/ColorEditor.vue';
 import ShapeEditor from '@/feature_modules/StyleVariables/ShapeEditor.vue';
 import Expandable from '@/components/Expandable.vue';
-import { toggleTheme } from '@/feature_modules/StyleVariables/theme';
+import ToggleTheme from '@/components/ToggleTheme.vue';
 
 </script>
 
