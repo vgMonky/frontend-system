@@ -39,10 +39,10 @@
         />
         <p>pt</p>
       </div>
-      <button class="contained" @click="resetToDefaults">Reset to Defaults</button>
+      <button class="contained" @click="resetToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
     <br>
-    
+
     <button @click="togglePreview">
       <component :is="showPreview ? ChevronDown : ChevronRight" />
       {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
@@ -72,7 +72,7 @@
 <script setup>
 import { ref } from 'vue';
 import { textVariables, updateTextVariable, resetToDefaults } from './textVariables';
-import { ChevronRight, ChevronDown } from 'lucide-vue-next';
+import { ChevronRight, ChevronDown, RefreshCcw } from 'lucide-vue-next';
 
 
 const showPreview = ref(false);

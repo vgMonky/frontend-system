@@ -1,14 +1,10 @@
 <script setup>
-import { onMounted } from 'vue';
 import NavBar from './NavBar.vue';
 import { useViewWatcher } from './viewWatcher';
 
 // Initialize the view watcher
 useViewWatcher();
 
-onMounted(() => {
-  // Any navigation-specific initialization can go here
-});
 </script>
 
 <template>

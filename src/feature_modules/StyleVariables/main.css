@@ -154,6 +154,5 @@ button.contained.bold:hover{
   border: 1px solid var(--c3);
   padding: var(--pad) var(--pad);
   border-radius: var(--r0);
-  margin-top: var(--pad);
   box-shadow: var(--sh);
 }

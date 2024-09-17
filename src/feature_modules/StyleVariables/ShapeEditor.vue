@@ -12,11 +12,12 @@
     <p>px</p>
   </div>
   <br>
-  <button class="contained" @click="resetToDefaults">Reset to Defaults</button>
+  <button class="contained" @click="resetToDefaults"><RefreshCcw /> Reset to Defaults</button>
 </template>
 
 <script setup>
 import { shapeVariables, updateShapeVariable, resetToDefaults } from './shapeVariables';
+import {RefreshCcw} from 'lucide-vue-next'
 
 const labels = {
   r0: 'Container Border Radius',
