@@ -16,8 +16,8 @@
   const components = ref([]);
   
   onMounted(async () => {
-    const componentContext = import.meta.glob('/src/components/componentsUseCase/*.vue', { eager: true });
-    const sourceContext = import.meta.glob('/src/components/componentsUseCase/*.vue', { as: 'raw', eager: true });
+    const componentContext = import.meta.glob('./*.vue', { eager: true });
+    const sourceContext = import.meta.glob('./*.vue', { as: 'raw', eager: true });
   
     for (const path in componentContext) {
       const name = path.split('/').pop().replace('.vue', '');
