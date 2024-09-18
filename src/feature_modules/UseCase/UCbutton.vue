@@ -4,12 +4,12 @@
     <div class="contained">
         <button>Normal</button>
         <br>
-        <button class="contained">Contained</button>
+        <button class="contained">Important</button>
         <br>
-        <button class="contained bold">Contained Bold</button>
+        <button class="contained bold">Very Important!</button>
     </div>
     <br>
-    <p>it can easly include icons by apending it ...</p>
+    <p>it can easly include icons to communicate its action by apending it from Lucide open-source icon library</p>
     <div class="contained">
         <button>
             <RefreshCcw />

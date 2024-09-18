@@ -1,12 +1,18 @@
 <template>
   <h1>Edit Mode</h1>
-  <p>asdds</p>
-  <div class="edit-mode-toggle contained">
+  <p>If you toggle the edit mode, you will make the system hide all the editing capabilities. In this section you will also be able to set public variables....</p>
+  <br>
+
+  <h3>Toggle edit mode</h3>
+  <div class="edit-mode-toggle">
+    <p>Alt + T to tuggle the EditMode. Then check the menu to notice the access change.</p>
+    <br>
     <Toggle v-model="editMode" :icon="toggleIcon" />
     <br>
     <span>{{ editMode ? 'Edit Mode: On' : 'Edit Mode: Off' }}</span>
   </div>
   <br>
+  <h3>Public Variables</h3>
   <p>Page Title:</p>
   <p>Contact Link:</p>
   <p>Contact Phone:</p>
