@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue';
-import { saveToLocal, loadFromLocal } from './saveLocal';
+import { saveToLocal, loadFromLocal } from '@/utils/saveLocal';
 
 const defaultColors = {
   dark: '#0f0f0f',

@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue';
-import { saveToLocal, loadFromLocal } from './saveLocal';
+import { saveToLocal, loadFromLocal } from '@/utils/saveLocal';
 
 const defaultTextVariables = {
   font: 'sans-serif',
