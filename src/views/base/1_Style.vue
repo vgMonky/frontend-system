@@ -3,7 +3,7 @@
     <h1>Style and Variables</h1>
     <p>In this section you can edit the whole style in a global way. Everithing edited here will be applyed live and will automaticly afect both light and dark theme.</p>
     <br>
-    <p>The sistem will adjust automatically the style to Mobile size to its constrains.</p>
+    <p>The system will adjust automatically the style to Mobile size and its constrains.</p>
   </div>
   <div class="contained">
     <em><p>* We recomend toggle Between Themes while editing the variables. You can use [ Alt + s ] keybind. </p></em>
