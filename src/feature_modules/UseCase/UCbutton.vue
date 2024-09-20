@@ -27,12 +27,27 @@
         </button>
         <br>
         <button class="contained" >
-            <RefreshCcw />
+            <Brush />
             button with icon
         </button>
         <br>
         <button class="contained bold">
-            <RefreshCcw />
+            <Telescope />
+            button with icon
+        </button>
+        <br>
+        <button class="quiet">
+            <GitBranch />
+            button with icon
+        </button>
+        <br>
+        <button class="contained quiet" >
+            <Ellipsis/>
+            button with icon
+        </button>
+        <br>
+        <button class="contained bold quiet">
+            <Rabbit />
             button with icon
         </button>
     </div>
@@ -53,12 +68,27 @@
             <component :is="showPreview ? ChevronDown : ChevronRight" />
             {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
         </button>
+        <br>
+        <button class="quiet" @click="togglePreview">
+            <component :is="showPreview ? ChevronDown : ChevronRight" />
+            {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
+        </button>
+        <br>
+        <button class="contained quiet" @click="togglePreview">
+            <component :is="showPreview ? ChevronDown : ChevronRight" />
+            {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
+        </button>
+        <br>
+        <button class="contained bold quiet" @click="togglePreview">
+            <component :is="showPreview ? ChevronDown : ChevronRight" />
+            {{ showPreview ? 'Hide Preview' : 'Show Preview'}}
+        </button>
     </div>
   </template>
   
   <script setup>
   import {ref} from 'vue' 
-  import { ChevronDown, ChevronRight, RefreshCcw} from 'lucide-vue-next';
+  import { ChevronDown, ChevronRight, RefreshCcw, Brush, Telescope, GitBranch, Ellipsis, Rabbit} from 'lucide-vue-next';
   
   const showPreview = ref(false);
   
