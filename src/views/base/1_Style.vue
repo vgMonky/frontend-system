@@ -6,17 +6,19 @@
     <p>The system will adjust automatically the style to Mobile size and its constraints.</p>
   </div>
   <div class="contained">
+    <p>Dark and Light theme.</p>
+    <br>
     <em><p class="ps">* We recommend toggling between themes while editing the variables. You can use [ Alt + s ] keybind. </p></em>
     <br>
     <ToggleTheme />
   </div>
   
   <div class="style-actions">
-    <button>
+    <button @click="applyRandomStyle">
       <Rainbow/>
       Change Current Style
     </button>
-    <button @click="downloadStyle">
+    <button class="quiet" @click="downloadStyle">
       <Download class="icon" />
       Download Current Style
     </button>
@@ -27,7 +29,7 @@
       @change="importStyle"
       accept=".json"
     >
-    <button @click="triggerFileInput">
+    <button class="quiet" @click="triggerFileInput">
       <Upload class="icon" />
       Import Style
     </button>
@@ -53,6 +55,11 @@ import Expandable from '@/components/Expandable.vue';
 import ToggleTheme from '@/components/ToggleTheme.vue';
 import { exportAllVariables, importAllVariables } from '@/feature_modules/StyleVariables/variableManager';
 import { Download, Upload , Rainbow} from 'lucide-vue-next';
+import { importRandomStyle } from '@/feature_modules/StyleVariables/save/savedStyleManager';
+
+const applyRandomStyle = () => {
+  importRandomStyle();
+};
 
 const fileInput = ref(null);
 
@@ -90,6 +97,6 @@ button-bold{
 .style-actions{
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 18px;
 }
 </style>

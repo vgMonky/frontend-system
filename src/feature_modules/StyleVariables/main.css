@@ -159,6 +159,7 @@ button.contained.bold:hover{
 }
 button.quiet{
   color: var(--c1);
+  opacity: 0.6;
 }
 button.quiet.contained{
   border: 1px solid var(--c3);
@@ -173,7 +174,7 @@ button.quiet.contained:hover{
 button.quiet.contained.bold{
   border: 1px solid var(--c3);
   background-color: var(--c3);
-  color: var(--c1);;
+  color: var(--c1);
 }
 button.quiet.contained.bold:hover{
   border: 1px solid var(--c3);

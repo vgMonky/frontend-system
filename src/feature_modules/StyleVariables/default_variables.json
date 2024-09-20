@@ -9,7 +9,7 @@
     "shapeVariables": {
       "r0": "6px",
       "r1": "29px",
-      "pad": "12px"
+      "pad": "18px"
     },
     "textVariables": {
       "font": "monospace",
