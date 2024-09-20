@@ -70,6 +70,7 @@ h1 {
   font-size: var(--hmax);
   font-weight: 600;
   color: var(--hcolor);
+  line-height: calc(var(--p)*3.6);
   
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad);
@@ -81,6 +82,7 @@ h2 {
   font-size: calc((var(--hmax) + var(--hmin)) / 2);
   font-weight: 600;
   color: var(--hcolor);
+  line-height: calc(var(--p)*2.6);
 
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad);
@@ -92,23 +94,28 @@ h3 {
   font-size: var(--hmin);
   font-weight: 600;
   color: var(--hcolor);
+  line-height: calc(var(--p)*2);
 
-  border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad);
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
 h4 {
   font-size: var(--hmin);
   font-weight: 600;
-  color: var(--hcolor);
+  color: var(--c1);
+  line-height: calc(var(--p)*2);
+
+  padding-bottom: var(--pad);
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
 p {
   font-size: var(--p);
-  line-height: 18pt;
+  line-height: calc(var(--p)*1.6);
+  color: var(--c1);
 }
 .ps {
   font-size: var(--ps);

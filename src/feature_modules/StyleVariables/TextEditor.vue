@@ -85,7 +85,7 @@ const labels = {
   font: 'Font Family',
   hmax: 'Max Heading Size',
   hmin: 'Min Heading Size',
-  p: 'Paragraph Size',
+  p: 'Paragraph Text Size',
   ps: 'Small Text Size'
 };
 
