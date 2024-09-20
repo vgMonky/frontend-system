@@ -9,17 +9,19 @@ useViewWatcher();
 
 <template>
   <NavBar title="Web Page Title" />
-  <main>
+  <view>
     <router-view></router-view>
-  </main>
+  </view>
 </template>
 
 <style scoped>
-main {
-  padding-top: 80px;
-  margin: 40px 40px;
+view {
+  padding: 80px 30px 0px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 800px;
+
 }
 </style>

@@ -6,12 +6,17 @@
     <p>The system will adjust automatically the style to Mobile size and its constraints.</p>
   </div>
   <div class="contained">
-    <em><p>* We recommend toggling between themes while editing the variables. You can use [ Alt + s ] keybind. </p></em>
+    <em><p class="ps">* We recommend toggling between themes while editing the variables. You can use [ Alt + s ] keybind. </p></em>
     <br>
     <ToggleTheme />
   </div>
+  
   <div class="style-actions">
-    <button @click="downloadStyle" class="button-bold">
+    <button>
+      <Rainbow/>
+      Change Current Style
+    </button>
+    <button @click="downloadStyle">
       <Download class="icon" />
       Download Current Style
     </button>
@@ -22,7 +27,7 @@
       @change="importStyle"
       accept=".json"
     >
-    <button @click="triggerFileInput" class="button-bold">
+    <button @click="triggerFileInput">
       <Upload class="icon" />
       Import Style
     </button>
@@ -47,7 +52,7 @@ import ShapeEditor from '@/feature_modules/StyleVariables/ShapeEditor.vue';
 import Expandable from '@/components/Expandable.vue';
 import ToggleTheme from '@/components/ToggleTheme.vue';
 import { exportAllVariables, importAllVariables } from '@/feature_modules/StyleVariables/variableManager';
-import { Download, Upload } from 'lucide-vue-next';
+import { Download, Upload , Rainbow} from 'lucide-vue-next';
 
 const fileInput = ref(null);
 
@@ -81,5 +86,10 @@ const importStyle = (event) => {
 }
 button-bold{
   text-align: center;
+}
+.style-actions{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 </style>
