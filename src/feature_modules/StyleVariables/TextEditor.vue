@@ -39,7 +39,7 @@
         />
         <p>pt</p>
       </div>
-      <button class="contained" @click="resetToDefaults"><RefreshCcw />Reset to Defaults</button>
+      <button class="contained" @click="resetTextToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
     <br>
 
@@ -71,7 +71,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { textVariables, updateTextVariable, resetToDefaults } from './textVariables';
+import { textVariables, updateTextVariable, resetTextToDefaults } from './variableManager';
 import { ChevronRight, ChevronDown, RefreshCcw } from 'lucide-vue-next';
 
 

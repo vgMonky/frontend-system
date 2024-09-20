@@ -25,14 +25,14 @@
         />
       </div>
       <br>
-      <button class="contained" @click="resetToDefaults"><RefreshCcw />Reset to Defaults</button>
+      <button class="contained" @click="resetColorToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue';
-import { colorVariables, updateColorVariable, resetToDefaults } from './colorVariables';
+import { colorVariables, updateColorVariable, resetColorToDefaults } from './variableManager';
 import { Plus, Minus, RefreshCcw } from 'lucide-vue-next';
 
 const showAdvanced = ref(false);

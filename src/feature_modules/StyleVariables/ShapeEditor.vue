@@ -16,11 +16,11 @@
     </div>
   </div>
   <br>
-  <button class="contained" @click="resetToDefaults"><RefreshCcw /> Reset to Defaults</button>
+  <button class="contained" @click="resetShapeToDefaults"><RefreshCcw /> Reset to Defaults</button>
 </template>
 
 <script setup>
-import { shapeVariables, updateShapeVariable, resetToDefaults } from './shapeVariables';
+import { shapeVariables, updateShapeVariable, resetShapeToDefaults } from './variableManager';
 import { RefreshCcw } from 'lucide-vue-next'
 
 const labels = {
