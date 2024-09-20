@@ -9,6 +9,16 @@
         <button class="contained bold">Very Important!</button>
     </div>
     <br>
+    <p>Quiet class will be used to turn off the accent color if there are to manny inputs on a sector...</p>
+    <div class="contained">
+        <button class="quiet">Normal Quiet</button>
+        <br>
+        <button class="contained quiet">Important Quiet</button>
+        <br>
+        <button class="contained bold quiet">Very Important Quiet</button>
+    </div>
+    <br>
+
     <p>it can easly include icons to communicate its action by apending it from Lucide open-source icon library</p>
     <div class="contained">
         <button>

@@ -1,11 +1,11 @@
 <template>
   <div class="color-editor">
     <h3>Edit Color Variables</h3>
-    <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. Look around! It's an indicator of interaction.</p>
+    <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. It's an indicator of interaction, thoe in some cases to much accent everywhere can lead to fatigue so the use of class quiet in buttons will turn off the accent color for him.  </p>
     <br>
     <div class="contained">
 
-      <button @click="toggleAdvanced">
+      <button class="" @click="toggleAdvanced">
         <component :is="showAdvanced ? Minus : Plus" />
         {{ showAdvanced ? 'Hide Advanced' : 'Show Advanced'}}
       </button>
@@ -25,7 +25,7 @@
         />
       </div>
       <br>
-      <button class="contained" @click="resetColorToDefaults"><RefreshCcw />Reset to Defaults</button>
+      <button class="quiet contained" @click="resetColorToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
   </div>
 </template>

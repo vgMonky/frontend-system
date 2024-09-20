@@ -39,7 +39,7 @@
         />
         <p>pt</p>
       </div>
-      <button class="contained" @click="resetTextToDefaults"><RefreshCcw />Reset to Defaults</button>
+      <button class="contained quiet" @click="resetTextToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
     <br>
 

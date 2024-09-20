@@ -16,7 +16,7 @@
     </div>
   </div>
   <br>
-  <button class="contained" @click="resetShapeToDefaults"><RefreshCcw /> Reset to Defaults</button>
+  <button class="contained quiet" @click="resetShapeToDefaults"><RefreshCcw /> Reset to Defaults</button>
 </template>
 
 <script setup>

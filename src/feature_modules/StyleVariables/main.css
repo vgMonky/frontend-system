@@ -157,8 +157,29 @@ button.contained.bold:hover{
   color: var(--c2);
   border: 1px solid var(--c2);
 }
-
-
+button.quiet{
+  color: var(--c1);
+}
+button.quiet.contained{
+  border: 1px solid var(--c3);
+  background-color: var(--c4);
+  color: var(--c1);;
+}
+button.quiet.contained:hover{
+  border: 1px solid var(--c3);
+  background-color: var(--c3);
+  color: var(--c1);
+}
+button.quiet.contained.bold{
+  border: 1px solid var(--c3);
+  background-color: var(--c3);
+  color: var(--c1);;
+}
+button.quiet.contained.bold:hover{
+  border: 1px solid var(--c3);
+  background-color: var(--c4);
+  color: var(--c1);;
+}
 
 /* Styles for all input elements */
 input,
