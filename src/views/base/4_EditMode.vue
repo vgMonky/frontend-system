@@ -1,12 +1,11 @@
 <template>
   <h1>Edit Mode</h1>
   <p>If you toggle the edit mode, you will make the system hide all the editing capabilities. In this section you will also be able to set public variables....</p>
-  <br>
-
   <h3>Toggle edit mode</h3>
+  <p class="ps">Only if you set the correct password you can toggle the Edit Mode</p>
   <p>Password:</p>
+  <input type="password">
   <div class="contained edit-mode-toggle">
-
     <p>Alt + T to tuggle the EditMode. Then check the menu to notice the access change.</p>
     <br>
     <Toggle v-model="editMode" :icon="toggleIcon" />
