@@ -1,27 +1,36 @@
+import { ref } from 'vue';
 import { updateColorVariable, updateShapeVariable, updateTextVariable } from '../variableManager';
 
-const styleFiles = [
-  'style-variables.json',
-  'style-variables(1).json',
-  'style-variables(2).json',
-  'style-variables(3).json',
-  'style-variables(4).json',
-  'style-variables(5).json',
-  'style-variables(6).json',
-  'style-variables(7).json'
-];
+// Dynamically import all JSON files in the current directory
+const styleFiles = import.meta.glob('./*.json', { eager: true });
+
+// Keep track of the currently active style
+const currentStyle = ref(null);
 
 async function importRandomStyle() {
-  const randomFile = styleFiles[Math.floor(Math.random() * styleFiles.length)];
+  const availableStyles = Object.keys(styleFiles);
+  
+  if (availableStyles.length === 0) {
+    console.error('No style files available');
+    return;
+  }
+
+  // Filter out the current style
+  const eligibleStyles = availableStyles.filter(style => style !== currentStyle.value);
+
+  if (eligibleStyles.length === 0) {
+    console.error('No other styles available');
+    return;
+  }
+
+  const randomFile = eligibleStyles[Math.floor(Math.random() * eligibleStyles.length)];
+  console.log(`Attempting to import style from: ${randomFile}`);
+  
   try {
-    const response = await fetch(`/src/feature_modules/StyleVariables/save/${randomFile}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const style = await response.json();
-    
+    const style = styleFiles[randomFile].default;
     applyStyle(style);
-    console.log(`Applied style from ${randomFile}`);
+    currentStyle.value = randomFile; // Update the current style
+    console.log(`Successfully applied style from ${randomFile}`);
   } catch (error) {
     console.error('Error importing random style:', error);
   }
@@ -39,4 +48,9 @@ function applyStyle(style) {
   }
 }
 
-export { importRandomStyle };
+// Function to get the current style
+function getCurrentStyle() {
+  return currentStyle.value;
+}
+
+export { importRandomStyle, getCurrentStyle };

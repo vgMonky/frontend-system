@@ -40,13 +40,16 @@ const displayTitle = computed(() => isEditMode.value ? "Frontend System" : props
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid var(--c3);
-  background-color: var(--c4);
+  background-color: rgba(var(--c4-rgb), 0.7); /* Added RGB transparency */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   height: 80px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .navbar-left {
   display: flex;

@@ -4,7 +4,9 @@
   <br>
 
   <h3>Toggle edit mode</h3>
-  <div class="edit-mode-toggle">
+  <p>Password:</p>
+  <div class="contained edit-mode-toggle">
+
     <p>Alt + T to tuggle the EditMode. Then check the menu to notice the access change.</p>
     <br>
     <Toggle v-model="editMode" :icon="toggleIcon" />

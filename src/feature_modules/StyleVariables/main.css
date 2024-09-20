@@ -175,11 +175,13 @@ button.quiet.contained.bold{
   border: 1px solid var(--c3);
   background-color: var(--c3);
   color: var(--c1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 button.quiet.contained.bold:hover{
   border: 1px solid var(--c3);
   background-color: var(--c4);
-  color: var(--c1);;
+  color: var(--c1);
 }
 
 /* Styles for all input elements */

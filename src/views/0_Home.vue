@@ -4,8 +4,8 @@
         <h1>Frontend System Documentation</h1>
         <h4 class="hero-subtitle">Empowering rapid content creation with constraint-driven development</h4>
         <div class="cta-buttons">
-          <button class="cta-button primary" @click="scrollToSection('workflow')">Get Started</button>
-          <button class="cta-button secondary" @click="scrollToSection('features')">Explore Features</button>
+          <button class="cta-button contained bold" @click="scrollToSection('workflow')">Get Started</button>
+          <button class="cta-button contained quiet" @click="scrollToSection('features')">Explore Features</button>
         </div>
       </header>
   
@@ -83,10 +83,12 @@
 
   
   .hero {
-    background-color: var();
+    background-color: var(--c3);
+    border: 1px dashed var(--c2);
     text-align: center;
     padding: 4rem 2rem;
     margin-bottom: 2rem;
+
   }
   
   

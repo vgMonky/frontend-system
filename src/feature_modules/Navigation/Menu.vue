@@ -51,22 +51,24 @@ const toggleCreateInfo = () => {
 </script>
 
 <template>
-  <div :class="menuClass" ref="menuRef">
-    <template v-if="isEditMode">
-      <router-link v-for="item in baseMenuItems" :key="item.path" :to="item.path">
+  <div class="menu">
+    <div :class="menuClass" ref="menuRef">
+      <template v-if="isEditMode">
+        <router-link v-for="item in baseMenuItems" :key="item.path" :to="item.path">
+          {{ item.name }}
+        </router-link>
+        <br>
+        <button @click="toggleCreateInfo">+ Create +</button>
+        <div v-if="showCreateInfo" class="create-info">
+          <p class="ps">To add a new view, create a new .vue file in src/views/newfile.vue or set an index to order them if you have many files:</p>
+          <p class="ps contained">E.g. src/views/1_firstfile.vue</p>
+        </div>
+        <br>
+      </template>
+      <router-link v-for="item in customMenuItems" :key="item.path" :to="item.path">
         {{ item.name }}
       </router-link>
-      <br>
-      <button @click="toggleCreateInfo">+ Create +</button>
-      <div v-if="showCreateInfo" class="create-info">
-        <p class="ps">To add a new view, create a new .vue file in src/views/newfile.vue or set an index to order them if you have many files:</p>
-        <p class="ps contained">E.g. src/views/1_firstfile.vue</p>
-      </div>
-      <br>
-    </template>
-    <router-link v-for="item in customMenuItems" :key="item.path" :to="item.path">
-      {{ item.name }}
-    </router-link>
+    </div>
   </div>
 </template>
 
@@ -75,9 +77,9 @@ const toggleCreateInfo = () => {
   position: fixed;
   top: 80px; /* Adjust based on your NavBar height */
   right: 0;
-  height: 100vh;
+  height: calc(100vh - 80px); /* Adjusted to account for navbar height */
   width: 250px;
-  background-color: var(--c4);
+  background-color: rgba(var(--c4-rgb), 1); /* Added RGB transparency */
   border-left: 1px solid var(--c3);
   padding: 20px;
   display: flex;
@@ -86,7 +88,11 @@ const toggleCreateInfo = () => {
   transform: translateX(100%);
   transition: transform 0.3s ease;
   z-index: 999;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
 }
+
 .menu-sidebar.open {
   transform: translateX(0);
 }
