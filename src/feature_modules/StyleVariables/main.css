@@ -70,7 +70,7 @@ h1 {
   font-size: var(--hmax);
   font-weight: 600;
   color: var(--hcolor);
-  line-height: calc(var(--p)*3.6);
+  line-height: calc(var(--p)*4);
   
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad);
@@ -82,7 +82,7 @@ h2 {
   font-size: calc((var(--hmax) + var(--hmin)) / 2);
   font-weight: 600;
   color: var(--hcolor);
-  line-height: calc(var(--p)*2.6);
+  line-height: calc(var(--p)*3);
 
   border-bottom: 1px solid var(--c3);
   padding-bottom: var(--pad);

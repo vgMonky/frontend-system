@@ -1,0 +1,21 @@
+{
+  "colorVariables": {
+    "dark": "#1f1d25",
+    "dark2": "#464463",
+    "accent": "#612cc9",
+    "light2": "#e5d2ea",
+    "light": "#ffffff"
+  },
+  "shapeVariables": {
+    "r0": "4px",
+    "r1": "29px",
+    "pad": "29px"
+  },
+  "textVariables": {
+    "font": "monospace",
+    "hmax": "38pt",
+    "hmin": "17pt",
+    "p": "12pt",
+    "ps": "9pt"
+  }
+}

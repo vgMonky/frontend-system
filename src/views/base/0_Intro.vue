@@ -1,12 +1,17 @@
 <template>
 
     <em>
-    <p class="ps">*** The filosofy of the constraints:  If you want to cut a tree, you use a Chainsaw. If you want to cut a paper you use Scissors. We dont design a single tool that cuts Trees and Papers. We create stuff convinient for the situation; we can say its "Designed by its Constraints". Of course the Scissors can be used in some creative way to do something else, but its design is shaped by its purpose.</p>
+    <p class="ps">*** The filosofy of the constraints: If you want to cut a paper you use Scissors. If you want to cut a tree, you use a Chainsaw. We dont design a single tool that cuts Trees and Papers. We create stuff convinient for the situation; we can say its "Designed by its Constraints". Of course the Scissors can be used in some creative way to do something else, but its design is shaped by its purpose.</p>
     <br>
-    <p class="ps">The system is designed in a strict manner. It is not intended to be infinitly costumizable, insted desicions where made to make this live template well suted for the constrains that define it: "Produce and present content in a fast manner, with a global style perfectly aligned". It lets the user create pages automatically by prompting over the system and controling global variables. It also has a secundary mission, which is to serve as a base template for developers to extend functionalities. </p>
+    <p class="ps">The system is designed in a strict manner. It is not intended to be infinitly costumizable, insted desicions where made to make this live template well suted for the constrains that define it: "Produce and present content in a fast manner, with professional UX/UI standard". It lets the user create pages automatically by prompting over the system and controling global variables. It also has a secundary mission, which is to serve as a base template for developers to extend functionalities. </p>
     <br>
     <br>
-    <p class="ps">*** You can test the system live right now by following the workflow: <br>1.Style (The global variable style system) <br> 2.Components (The documented library) <br> 3. EditMode (Toggle a development environment) <br> 4.Create (Manual or with AI) </p>
+    <p class="ps">*** You can test the system live right now by following the straight forward workflow: 
+        <br> 1.Style (The global variable style system) 
+        <br> 2.UseCase (The documented library) 
+        <br> 3.Instructions (global prompt's that constrain the final output)
+        <br> 4.EditMode (Toggle a development environment) 
+        <br> 5.Create (Manual or with AI) </p>
     <br>
     <br>
     <p class="ps">*** For Developers: This repo is a live template, a factory ready to produce and present content, but also a system-base redy to get feeded by your own components. Duplicate the repo, own the code, and start your extension.</p>

@@ -23,19 +23,19 @@
         <section id="features">
           <h2>3. Core Features</h2>
           <div class="feature-grid">
-            <div class="feature-item">
+            <div class="feature-item contained">
               <h3>Component Library</h3>
               <p>Built on a generic style variable system, ensuring global consistency and alignment.</p>
             </div>
-            <div class="feature-item">
+            <div class="feature-item contained">
               <h3>Edit Mode</h3>
               <p>Toggleable development environment for seamless transitions between user and developer views.</p>
             </div>
-            <div class="feature-item">
+            <div class="feature-item contained">
               <h3>Navigation System</h3>
               <p>Facilitates view creation with automated route mapping.</p>
             </div>
-            <div class="feature-item">
+            <div class="feature-item contained">
               <h3>AI-Assisted Content Creation</h3>
               <p>Utilizes AI to format content based on the system's library documentation.</p>
             </div>
@@ -111,10 +111,9 @@
   }
   
   .feature-item {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0.8;
+    background-color: var(--c3);
+    box-shadow: var(--sh);
   }
   
   ol {
