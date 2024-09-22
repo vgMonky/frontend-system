@@ -40,6 +40,11 @@
     margin-right: 8px;
   }
   
+  .rendered-component{
+    border-radius: var(--r0);
+    padding: 16px;
+    border: 1px solid var(--c3);
+  }
   .source-code {
     background-color: var(--c3);
     border-radius: var(--r0);

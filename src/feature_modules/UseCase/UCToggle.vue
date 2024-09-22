@@ -1,6 +1,6 @@
 <template>
     <h2>Toggle Component</h2>
-    <p>The Toggle Component is a customizable switch that allows users to toggle between two states.</p>
+    <p>The Toggle Component is a customizable switch that allows users to toggle between two states. It can have any icon apropiate for the situation and functionalities.</p>
     <br>
     <Toggle v-model="isOnline" :icon="toggleIcon" />
     <p>Current status: {{ isOnline ? 'Online' : 'Offline' }}</p>
