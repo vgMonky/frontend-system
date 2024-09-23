@@ -17,14 +17,14 @@
   
   onMounted(async () => {
     const componentContext = import.meta.glob('./*.vue', { eager: true });
-    const sourceContext = import.meta.glob('./*.vue', { as: 'raw', eager: true });
+    const sourceContext = import.meta.glob('./*.vue', { query: '?raw', eager: true });
   
     for (const path in componentContext) {
       const name = path.split('/').pop().replace('.vue', '');
       components.value.push({
         name,
         component: componentContext[path].default,
-        source: sourceContext[path]
+        source: await sourceContext[path]
       });
     }
   });

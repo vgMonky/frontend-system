@@ -2,8 +2,14 @@
 
     <em>
     <h4>Frontend System Library</h4>
+    <br>
+    ***Dont read this. They are random ideas and not concrete explenations.
+    <br>
+    <br>
+    <br>
     <p class="ps">*** The filosofy of the constraints: If you want to cut a paper you use Scissors. If you want to cut a tree, you use a Chainsaw. We dont design a single tool that cuts Trees and Papers. We create stuff convinient for the situation; we can say its "Designed by its Constraints". Of course the Scissors can be used in some creative way to do something else, but its design is shaped by its purpose.</p>
     <br>
+ 
     <p class="ps">The system is designed in a strict manner. It is not intended to be infinitly costumizable, insted desicions where made to make this live template well suted for the constrains that define it: "Present content in a fast manner, with professional UX/UI standard". It lets the user create pages automatically by prompting over the system and controling global variables. It also has a secundary mission, which is to serve as a base template for developers to extend functionalities. </p>
     <br>
     <br>
