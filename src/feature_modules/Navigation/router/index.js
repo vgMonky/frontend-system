@@ -37,8 +37,15 @@ if (sortedCustomRoutes.length > 0) {
 const routes = [...baseRoutes, ...sortedCustomRoutes]
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+  history: createWebHistory('/frontend-system/'), // Update this line
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router
