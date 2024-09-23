@@ -10,9 +10,9 @@
     <p class="ps">*** You can test the system live right now by following the straight forward workflow: 
         <br> 1.Style (The global variable style system) 
         <br> 2.UseCase (The documented library) 
-        <br> 3.Instructions (global prompt's that constrain the final output)
         <br> 4.EditMode (Toggle a development environment) 
-        <br> 5.Create (Manual or with AI) </p>
+        <br> 5.Create 
+    </p>
     <br>
     <br>
     <p class="ps">*** For Developers: This repo is a live template, a factory ready to produce and present content, but also a system-base redy to get feeded by your own components. Duplicate the repo, own the code, and start your extension.</p>

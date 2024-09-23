@@ -1,104 +1,127 @@
 <template>
-    <div class="home">
-      <header>
-        <h1>PrecisionCut Laser Engraving</h1>
-        <nav>
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-  
-      <main>
-        <section id="hero">
-          <h2>Bring Your Ideas to Life with Precision Laser Engraving</h2>
-          <p>Transform ordinary materials into extraordinary works of art. From personalized gifts to industrial marking, we've got you covered.</p>
-          <a href="#quote" class="cta-button">Get a Free Quote</a>
-        </section>
-  
-        <section id="services">
-          <h2>Our Services</h2>
-          <ul>
-            <li v-for="service in services" :key="service">{{ service }}</li>
-          </ul>
-          <p>Custom designs and bulk orders welcome!</p>
-        </section>
-  
-        <section id="featured-work">
-          <h2>Featured Work</h2>
-          <div class="gallery">
-            <img v-for="image in featuredImages" :key="image.alt" :src="image.src" :alt="image.alt">
+  <div class="landing-page">
+    <header class="hero">
+      <h1>Frontend System Documentation</h1>
+      <h4 class="hero-subtitle">Empowering rapid content creation with constraint-driven development</h4>
+      <div class="cta-buttons">
+        <button class="cta-button contained bold" @click="scrollToSection('workflow')">Get Started</button>
+        <button class="cta-button contained quiet" @click="scrollToSection('features')">Explore Features</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section id="philosophy">
+        <h4>1. Design Philosophy: Constraint-Driven Development</h4>
+        <p>Our system adheres to the principle of "Designed by Constraints." Like specialized tools crafted for specific tasks, our components are tailored to meet particular needs efficiently. While versatility is valued, each element is primarily shaped by its intended purpose within the system.</p>
+      </section>
+
+      <section id="architecture">
+        <h4>2. System Architecture: Structured for Rapid Content Production</h4>
+        <p>This frontend system is architected with a focus on swift content creation and presentation. It offers a balance between structure and flexibility, providing a robust framework for efficient development while allowing for creative adaptations within its defined constraints.</p>
+      </section>
+
+      <section id="features">
+        <h4>3. Core Features</h4>
+        <div class="feature-grid">
+          <div class="feature-item contained">
+            <h4>Component Library</h4>
+            <p>Built on a generic style variable system, ensuring global consistency and alignment.</p>
           </div>
-          <a href="#portfolio">View Full Portfolio</a>
-        </section>
-  
-        <section id="why-choose-us">
-          <h2>Why Choose PrecisionCut?</h2>
-          <ul>
-            <li v-for="reason in choosingReasons" :key="reason">{{ reason }}</li>
-          </ul>
-        </section>
-  
-        <section id="quote">
-          <h2>Ready to Start Your Project?</h2>
-          <p>Get in touch for a free consultation and quote.</p>
-          <form @submit.prevent="submitForm">
-            <input v-model="form.name" type="text" placeholder="Name" required>
-            <input v-model="form.email" type="email" placeholder="Email" required>
-            <textarea v-model="form.message" placeholder="Tell us about your project"></textarea>
-            <button type="submit">Request Quote</button>
-          </form>
-        </section>
-      </main>
-  
-      <footer>
-        <p>&copy; {{ currentYear }} PrecisionCut Laser Engraving. All rights reserved.</p>
-        <nav>
-          <a href="#privacy">Privacy Policy</a> |
-          <a href="#terms">Terms of Service</a>
-        </nav>
-      </footer>
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref, computed } from 'vue'
-  
-  const services = ref([
-    'Wood Engraving',
-    'Metal Etching',
-    'Glass Customization',
-    'Acrylic Designs'
-  ])
-  
-  const featuredImages = ref([
-    { src: '/api/placeholder/300/200', alt: 'Wooden box with intricate floral design' },
-    { src: '/api/placeholder/300/200', alt: 'Metal business card with company logo' },
-    { src: '/api/placeholder/300/200', alt: 'Personalized glass award' }
-  ])
-  
-  const choosingReasons = ref([
-    'State-of-the-art laser technology',
-    'Expert designers and technicians',
-    'Quick turnaround times',
-    'Satisfaction guaranteed'
-  ])
-  
-  const form = ref({
-    name: '',
-    email: '',
-    message: ''
-  })
-  
-  const currentYear = computed(() => new Date().getFullYear())
-  
-  const submitForm = () => {
-    // Handle form submission logic here
-    console.log('Form submitted:', form.value)
-    // Reset form after submission
-    form.value = { name: '', email: '', message: '' }
+          <div class="feature-item contained">
+            <h4>Edit Mode</h4>
+            <p>Toggleable development environment for seamless transitions between user and developer views.</p>
+          </div>
+          <div class="feature-item contained">
+            <h4>Navigation System</h4>
+            <p>Facilitates view creation with automated route mapping.</p>
+          </div>
+          <div class="feature-item contained">
+            <h4>AI-Assisted Content Creation</h4>
+            <p>Utilizes AI to format content based on the system's library documentation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow">
+        <h4>4. Workflow Overview</h4>
+        <ol>
+          <li>Style: Configure global variable style system</li>
+          <li>Components: Explore the documented library</li>
+          <li>Edit Mode: Toggle development environment</li>
+          <li>Create: Generate content manually or with AI assistance</li>
+        </ol>
+      </section>
+
+      <section id="for-developers">
+        <h4>5. For Developers</h4>
+        <p>This repository serves as both a live template for rapid content production and a base system ready for extension. Developers are encouraged to fork the repository, take ownership of the code, and expand upon the existing framework.</p>
+      </section>
+
+      <section id="ai-integration">
+        <h4>6. AI Integration</h4>
+        <p>The system's AI interpreter is informed by the documented Use Cases. Modifying the documentation will alter the AI's interpretation and, consequently, its content formatting approach. Global styles can be manually adjusted in the dedicated "Style" page.</p>
+      </section>
+
+      <section id="ai-usage">
+        <h4>7. Recommended AI Usage</h4>
+        <p>While AI assistance is a powerful feature, it's important to maintain human oversight. We recommend providing the AI with clear content direction and specifications. This can be in various formats such as bullet points, tree structures, paragraphs, or detailed specifications. Remember, the user retains creative control, with the AI serving as a responsive tool to enhance productivity.</p>
+      </section>
+    </main>
+  </div>
+</template>
+
+<script setup>
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
   }
-  </script>
+};
+</script>
+
+<style scoped>
+
+
+.hero {
+  background-color: var(--c3);
+  border: 1px dashed var(--c2);
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+
+}
+
+
+.hero-subtitle {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  opacity: 0.8;
+  background-color: var(--c3);
+  box-shadow: var(--sh);
+}
+
+ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+</style>
