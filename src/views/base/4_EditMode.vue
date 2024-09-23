@@ -15,8 +15,9 @@
   <br>
   <h3>Public Variables</h3>
   <p>Page Title:</p>
-  <p>Contact Link:</p>
-  <p>Contact Phone:</p>
+  <input type="text">
+  <p>Page icon:</p>
+  <input type="file">
 </template>
 
 <script setup>

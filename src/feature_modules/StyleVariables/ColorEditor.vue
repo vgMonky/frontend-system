@@ -25,7 +25,7 @@
         />
       </div>
       <br>
-      <button class="quiet contained bold" @click="resetColorToDefaults"><RefreshCcw />Reset to Defaults</button>
+      <button class="quiet contained" @click="resetColorToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
   </div>
 </template>

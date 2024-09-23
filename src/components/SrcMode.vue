@@ -1,6 +1,6 @@
 <template>
     <div class="src-mode">
-      <button @click="toggleSource" class="toggle-btn">
+      <button @click="toggleSource" class="toggle-btn quiet">
         <component :is="showSource ? EyeOff : Eye" class="icon" />
         {{ showSource ? 'Hide Source' : 'Show Source' }}
       </button>
@@ -34,20 +34,24 @@
   </script>
   
   <style scoped>
-
+  .toggle-btn{
+    padding: 8px 16px;
+    border-radius: var(--r0) var(--r0) 0px 0px;
+  }
   
   .icon {
     margin-right: 8px;
   }
   
   .rendered-component{
-    border-radius: var(--r0);
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 0px var(--r0) var(--r0) var(--r0);
     padding: 16px;
-    border: 1px solid var(--c3);
+
   }
   .source-code {
-    background-color: var(--c3);
-    border-radius: var(--r0);
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 0px var(--r0) var(--r0) var(--r0);
     padding: 16px;
     overflow-x: auto;  /* This enables horizontal scrolling */
     white-space: nowrap;  /* Prevents line wrapping */

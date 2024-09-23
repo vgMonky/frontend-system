@@ -39,6 +39,7 @@
         />
         <p>pt</p>
       </div>
+      <br>
       <button class="contained quiet" @click="resetTextToDefaults"><RefreshCcw />Reset to Defaults</button>
     </div>
     <br>

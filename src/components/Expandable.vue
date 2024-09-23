@@ -47,7 +47,8 @@ const currentTitle = computed(() => {
 }
 
 .title-container {
-  border: 1px solid var(--c2);
+  background-color: var(--c4);
+  border: 1px solid var(--c3);
   border-radius: var(--r0) var(--r0) 0 0;
   transition: 0.3s ease-out;
   padding: var(--pad) var(--pad);

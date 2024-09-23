@@ -1,6 +1,7 @@
 <template>
     <h2>Button element</h2>
     <p>Button element can be used with out class, contained class or contained bold class, based on the level of importance/accent.</p>
+    <br>
     <div class="contained">
         <button>Normal</button>
         <br>
@@ -9,7 +10,9 @@
         <button class="contained bold">Very Important!</button>
     </div>
     <br>
+    <br>
     <p>Quiet class will be used to turn off the accent color if there are to manny inputs on a sector...</p>
+    <br>
     <div class="contained">
         <button class="quiet">Normal Quiet</button>
         <br>
@@ -18,8 +21,9 @@
         <button class="contained bold quiet">Very Important Quiet</button>
     </div>
     <br>
-
+    <br>
     <p>it can easly include icons to communicate its action by apending it from Lucide open-source icon library</p>
+    <br>
     <div class="contained">
         <button>
             <RefreshCcw />

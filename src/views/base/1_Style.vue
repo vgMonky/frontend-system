@@ -14,10 +14,12 @@
   </div>
   
   <div class="style-actions">
-    <button @click="applyRandomStyle">
-      <Rainbow/>
-      Change Current Style
-    </button>
+    <div>
+      <button class="" @click="applyRandomStyle">
+        <Rainbow/>
+        Change Current Style
+      </button>
+    </div>
     <button class="quiet" @click="downloadStyle">
       <Download class="icon" />
       Download Current Style
