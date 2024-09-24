@@ -3,7 +3,7 @@
     <em>
     <h4>Frontend System Library</h4>
     <br>
-    ***Dont read this. They are random ideas and not concrete explenations.
+    <!-- ***Dont read this. They are random ideas and not concrete explenations.
     <br>
     <br>
     <br>
@@ -29,7 +29,7 @@
     <p class="ps">*** The system consists of basic features that consider the complexities of UX/UI desing and frontend development: <br> - A vue component library build on top of a generic style variable system to mantain consistency and alignment in a global way. <br> - An Edit mode that can be toggled on and off to hide the base views that lets the user edit the environment. <br> - A Navegation system that lets you create views and automates their route mapping. <br> - AI that helps you create view pages, by formating your content based on the systems library documentation ( UseCase/ )</p>
     <br>
     <br>
-    <p class="ps">*** Recomendation: The AI is not the boss, at list not yet. We recomend you give him the content and direction, it can be bullet points, tree structure, paragraphs, vocabulary descriptions, detailed specifications... whatever format you want. Just remember you are the boss and he reacts to your prompt.</p>
+    <p class="ps">*** Recomendation: The AI is not the boss, at list not yet. We recomend you give him the content and direction, it can be bullet points, tree structure, paragraphs, vocabulary descriptions, detailed specifications... whatever format you want. Just remember you are the boss and he reacts to your prompt.</p> -->
     </em>
 
 </template>
