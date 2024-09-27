@@ -263,6 +263,7 @@ textarea:disabled {
 
 
 .contained{
+  background-color: var(--c4);
   border: 1px solid var(--c3);
   padding: var(--pad) var(--pad);
   border-radius: var(--r0);

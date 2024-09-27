@@ -1,13 +1,22 @@
 <template>
+
+
   <div class="landing-page">
-    <header class="hero">
-      <h1>Frontend System Documentation</h1>
-      <h4 class="hero-subtitle">Empowering rapid content creation with constraint-driven development</h4>
-      <div class="cta-buttons">
-        <button class="cta-button contained bold" @click="scrollToSection('workflow')">Get Started</button>
-        <button class="cta-button contained quiet" @click="scrollToSection('features')">Explore Features</button>
+
+    <div class="hero">
+      <div class="glass-container"></div>
+      <div class="color-container"></div>
+      <div class="content-container">
+        <h1>Frontend System Documentation</h1>
+        <h4 class="hero-subtitle">Empowering rapid content creation with constraint-driven development</h4>
+        <div class="cta-buttons">
+          <button class="cta-button contained bold" @click="scrollToSection('workflow')">Get Started</button>
+          <button class="cta-button contained quiet" @click="scrollToSection('features')">Explore Features</button>
+        </div>
       </div>
-    </header>
+    </div>
+
+
 
     <main class="content">
       <section id="philosophy">
@@ -71,6 +80,8 @@
 </template>
 
 <script setup>
+import Section from '@/components/Section.vue' 
+
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   if (element) {
@@ -80,17 +91,39 @@ const scrollToSection = (sectionId) => {
 </script>
 
 <style scoped>
-
-
 .hero {
-  background-color: var(--c3);
+  position: relative;
   border: 1px dashed var(--c2);
+  border-radius: var(--r0);
   text-align: center;
   padding: 4rem 2rem;
   margin-bottom: 2rem;
-
+  overflow: hidden;
 }
 
+.glass-container, .color-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.glass-container {
+  backdrop-filter: blur(20px);
+  z-index: 1;
+}
+
+.color-container {
+  background-color: var(--c3);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.content-container {
+  position: relative;
+  z-index: 3;
+}
 
 .hero-subtitle {
   margin-bottom: 2rem;
