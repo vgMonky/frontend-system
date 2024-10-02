@@ -259,13 +259,21 @@ textarea:disabled {
 
 
 
-
-
-
 .contained{
   background-color: var(--c4);
   border: 1px solid var(--c3);
   padding: var(--pad) var(--pad);
   border-radius: var(--r0);
   box-shadow: var(--sh);
+}
+/* another way to contain */
+.banner{
+  background-color: var(--c3);
+  box-shadow: var(--sh);
+  position: relative;
+  text-align: left;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: var(--pad);
+  overflow: hidden;
 }

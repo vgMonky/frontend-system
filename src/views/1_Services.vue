@@ -80,7 +80,6 @@
 </template>
 
 <script setup>
-import Section from '@/components/Section.vue' 
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);

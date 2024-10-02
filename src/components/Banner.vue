@@ -39,7 +39,6 @@ export default {
 <style scoped>
 .banner {
   position: relative;
-  color: var(--c0);
   text-align: left;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -56,6 +55,7 @@ export default {
   background-size: cover;
   background-position: center;
   z-index: 1;
+  background-color: var(--c3);
 }
 
 .banner-glass {
@@ -64,7 +64,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 

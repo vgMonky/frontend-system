@@ -1,6 +1,6 @@
 <template>
     <Banner 
-      backgroundImage="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+      backgroundImage="https://www.shutterstock.com/image-photo/chameleon-close-eye-portrait-reptile-600nw-2466925375.jpg"
       :blurPixel="0"
     >
     </Banner>
@@ -16,6 +16,51 @@
     <br>
   </em>
 
+    <h4>3. Core Features</h4>
+    <div class="feature-grid">
+      <div class="feature-item contained">
+        <h4>Component Library</h4>
+        <p>Built on a generic style variable system, ensuring global consistency and alignment.</p>3
+
+      </div>
+      <div class="feature-item contained">
+        <h4>Edit Mode</h4>
+        <p>Toggleable development environment for seamless transitions between user and developer views.</p>
+      </div>
+      <div class="feature-item contained">
+        <h4>Navigation System</h4>
+        <p>Facilitates view creation with automated route mapping.</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+        
+    <Banner >
+      <div >
+        <h4>0. Navigation System</h4>
+        <p>Facilitates view creation with automated route mapping.</p>
+      </div>
+      <div >
+        <h4>1. AI-Assisted Content Creation</h4>
+        <p>Utilizes AI to format content based on the system's library documentation.</p>
+      </div>
+      <div >
+        <h4>2. Assisted Content Creation</h4>
+        <p>Utilizes AI to format content based on the system's library documentation.</p>
+      </div>
+      <div >
+        <h4>3. Content Creation</h4>
+        <p>Utilizes AI to format content based on the system's library documentation.</p>
+      </div>
+
+    </Banner>
 
 </template>
 
@@ -25,5 +70,18 @@ import Banner from '@/components/Banner.vue'
 </script>
 
 <style scoped>
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  opacity: 0.8;
+  background-color: var(--c3);
+  box-shadow: var(--sh);
+}
 
 </style>
