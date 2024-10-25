@@ -24,12 +24,6 @@
         <p>Our system adheres to the principle of "Designed by Constraints." Like specialized tools crafted for specific tasks, our components are tailored to meet particular needs efficiently. While versatility is valued, each element is primarily shaped by its intended purpose within the system.</p>
       </section>
 
-      <div class="text-storage-test">
-        <h2>Text Storage Test</h2>
-        <TextInput />
-        <TextViewer />
-      </div>
-
       <section id="features">
         <h4>3. Core Features</h4>
         <div class="feature-grid">
@@ -72,9 +66,6 @@
 </template>
 
 <script setup>
-import TextInput from '../feature_modules/text_database/TextInput.vue'
-import TextViewer from '../feature_modules/text_database/TextViewer.vue'
-
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   if (element) {
