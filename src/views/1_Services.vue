@@ -24,10 +24,11 @@
         <p>Our system adheres to the principle of "Designed by Constraints." Like specialized tools crafted for specific tasks, our components are tailored to meet particular needs efficiently. While versatility is valued, each element is primarily shaped by its intended purpose within the system.</p>
       </section>
 
-      <section id="architecture">
-        <h4>2. System Architecture: Structured for Rapid Content Production</h4>
-        <p>This frontend system is architected with a focus on swift content creation and presentation. It offers a balance between structure and flexibility, providing a robust framework for efficient development while allowing for creative adaptations within its defined constraints.</p>
-      </section>
+      <div class="text-storage-test">
+        <h2>Text Storage Test</h2>
+        <TextInput />
+        <TextViewer />
+      </div>
 
       <section id="features">
         <h4>3. Core Features</h4>
@@ -66,20 +67,13 @@
         <p>This repository serves as both a live template for rapid content production and a base system ready for extension. Developers are encouraged to fork the repository, take ownership of the code, and expand upon the existing framework.</p>
       </section>
 
-      <section id="ai-integration">
-        <h4>6. AI Integration</h4>
-        <p>The system's AI interpreter is informed by the documented Use Cases. Modifying the documentation will alter the AI's interpretation and, consequently, its content formatting approach. Global styles can be manually adjusted in the dedicated "Style" page.</p>
-      </section>
-
-      <section id="ai-usage">
-        <h4>7. Recommended AI Usage</h4>
-        <p>While AI assistance is a powerful feature, it's important to maintain human oversight. We recommend providing the AI with clear content direction and specifications. This can be in various formats such as bullet points, tree structures, paragraphs, or detailed specifications. Remember, the user retains creative control, with the AI serving as a responsive tool to enhance productivity.</p>
-      </section>
     </main>
   </div>
 </template>
 
 <script setup>
+import TextInput from '../feature_modules/text_database/TextInput.vue'
+import TextViewer from '../feature_modules/text_database/TextViewer.vue'
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);

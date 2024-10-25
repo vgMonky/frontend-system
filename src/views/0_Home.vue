@@ -20,7 +20,7 @@
     <div class="feature-grid">
       <div class="feature-item contained">
         <h4>Component Library</h4>
-        <p>Built on a generic style variable system, ensuring global consistency and alignment.</p>3
+        <p>Built on a generic style variable system, ensuring global consistency and alignment.</p>
 
       </div>
       <div class="feature-item contained">
