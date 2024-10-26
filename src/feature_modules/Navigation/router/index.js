@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const baseViews = import.meta.glob('@/views/base/*.vue')
-const customViews = import.meta.glob('@/views/*.vue')
+const baseViews = import.meta.glob('@/feature_modules/Navigation/views/base/*.vue')
+const customViews = import.meta.glob('@/feature_modules/Navigation/views/*.vue')
 
 const createRoutes = (views, isBase = false) => {
   return Object.entries(views).map(([path, component]) => {
@@ -37,7 +37,7 @@ if (sortedCustomRoutes.length > 0) {
 const routes = [...baseRoutes, ...sortedCustomRoutes]
 
 const router = createRouter({
-  history: createWebHistory('/frontend-system/'), // Update this line
+  history: createWebHistory('/frontend-system/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
