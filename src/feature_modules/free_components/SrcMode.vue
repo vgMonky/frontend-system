@@ -51,7 +51,7 @@ const toggleSource = () => {
 }
 .source-code {
   background-color: rgba(0, 0, 0, 0.08);
-  border-radius: 0px var(--r0) var(--r0) var(--r0);
+  border-radius: var(--r0);
   padding: 16px;
   overflow-x: auto;  /* This enables horizontal scrolling */
   white-space: nowrap;  /* Prevents line wrapping */
