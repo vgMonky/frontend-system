@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { toggleMenu } from './toggleMenu';
 import { getEditMode } from './toggleEditMode';
 import Menu from './Menu.vue';
-import ToggleTheme from '@/feature_modules/free_components/ToggleTheme.vue'
+import ToggleTheme from '@/core_modules/free_components/ToggleTheme.vue'
 import { Menu as MenuIcon, FileSliders } from 'lucide-vue-next'
 
 const props = defineProps({

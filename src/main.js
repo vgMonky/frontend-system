@@ -1,8 +1,9 @@
-import './feature_modules/StyleVariables/main.css'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import router from '@/feature_modules/Navigation/router'
+import router from '@/core_modules/Navigation/router'
+import '@/core_modules/StyleVariables/main.css'
 
 const app = createApp(App)
 const pinia = createPinia()

@@ -14,7 +14,7 @@
 </template>
   
 <script setup>
-import Expandable from '@/feature_modules/free_components/Expandable.vue';
+import Expandable from '@/core_modules/free_components/Expandable.vue';
 </script>
 
 <style scoped>

@@ -8,7 +8,7 @@
   
   <script setup>
   import { ref, computed } from 'vue';
-  import Toggle from '@/feature_modules/free_components/Toggle.vue';
+  import Toggle from '@/core_modules/free_components/Toggle.vue';
   import { Wifi, WifiOff } from 'lucide-vue-next';
   
   const isOnline = ref(false);

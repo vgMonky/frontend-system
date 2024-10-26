@@ -1,8 +1,8 @@
 <script setup>
 import { computed } from 'vue';
-import Toggle from '@/feature_modules/free_components/Toggle.vue';
+import Toggle from '@/core_modules/free_components/Toggle.vue';
 import { Moon, Sun } from 'lucide-vue-next';
-import { currentTheme, toggleTheme } from '@/feature_modules/StyleVariables/theme';
+import { currentTheme, toggleTheme } from '@/core_modules/StyleVariables/theme';
 
 // Compute darkMode based on currentTheme
 const darkMode = computed({

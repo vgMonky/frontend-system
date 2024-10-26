@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import AutoUseCase from '@/feature_modules/UseCase/AutoUseCase.vue';
+import AutoUseCase from '@/core_modules/UseCase/AutoUseCase.vue';
 </script>
 
 <style scoped>

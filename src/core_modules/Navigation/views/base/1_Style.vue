@@ -50,14 +50,14 @@
 
 <script setup>
 import { ref } from 'vue';
-import TextEditor from '@/feature_modules/StyleVariables/TextEditor.vue';
-import ColorEditor from '@/feature_modules/StyleVariables/ColorEditor.vue';
-import ShapeEditor from '@/feature_modules/StyleVariables/ShapeEditor.vue';
-import Expandable from '@/feature_modules/free_components/Expandable.vue';
-import ToggleTheme from '@/feature_modules/free_components/ToggleTheme.vue';
-import { exportAllVariables, importAllVariables } from '@/feature_modules/StyleVariables/variableManager';
+import TextEditor from '@/core_modules/StyleVariables/TextEditor.vue';
+import ColorEditor from '@/core_modules/StyleVariables/ColorEditor.vue';
+import ShapeEditor from '@/core_modules/StyleVariables/ShapeEditor.vue';
+import Expandable from '@/core_modules/free_components/Expandable.vue';
+import ToggleTheme from '@/core_modules/free_components/ToggleTheme.vue';
+import { exportAllVariables, importAllVariables } from '@/core_modules/StyleVariables/variableManager';
 import { Download, Upload , Rainbow} from 'lucide-vue-next';
-import { importRandomStyle } from '@/feature_modules/StyleVariables/save/savedStyleManager';
+import { importRandomStyle } from '@/core_modules/StyleVariables/save/savedStyleManager';
 
 const applyRandomStyle = () => {
   importRandomStyle();
