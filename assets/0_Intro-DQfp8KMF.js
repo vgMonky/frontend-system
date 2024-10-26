@@ -1,1 +1,0 @@
-import{_ as r,c as t,a as n,o}from"./index-VDvGnox9.js";const l={};function s(a,e){return o(),t("em",null,e[0]||(e[0]=[n("h4",null,"Frontend System Library",-1),n("br",null,null,-1)]))}const _=r(l,[["render",s]]);export{_ as default};
