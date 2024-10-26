@@ -10,8 +10,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import Expandable from '@/feature_modules/components/Expandable.vue';
-import SrcMode from '@/feature_modules/components/SrcMode.vue';
+import Expandable from '@/feature_modules/free_components/Expandable.vue';
+import SrcMode from '@/feature_modules/free_components/SrcMode.vue';
 
 const components = ref([]);
 

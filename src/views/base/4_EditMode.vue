@@ -22,7 +22,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import Toggle from '@/feature_modules/components/Toggle.vue';
+import Toggle from '@/feature_modules/free_components/Toggle.vue';
 import {  MonitorCheck, Pencil} from 'lucide-vue-next';
 import { toggleEditMode, getEditMode } from '@/feature_modules/Navigation/toggleEditMode';
 

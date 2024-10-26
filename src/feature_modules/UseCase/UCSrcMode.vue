@@ -8,7 +8,7 @@
 </template>
   
 <script setup>
-import SrcMode from '@/feature_modules/components/SrcMode.vue';
+import SrcMode from '@/feature_modules/free_components/SrcMode.vue';
 </script>
 
 <style scoped>
