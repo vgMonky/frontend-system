@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue';
-import { saveToLocal, loadFromLocal } from '@/utils/saveLocal';
+import { saveToLocal, loadFromLocal } from '@/feature_modules/StyleVariables/saveLocal';
 import defaultVariables from './default_variables.json';
 
 // Create refs for each variable group

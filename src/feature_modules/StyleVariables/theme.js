@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue';
-import { saveToLocal, loadFromLocal } from '../../utils/saveLocal';
+import { saveToLocal, loadFromLocal } from './saveLocal';
 
 const currentTheme = ref(loadFromLocal('theme', 'light'));
 
