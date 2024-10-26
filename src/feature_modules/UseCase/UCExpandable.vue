@@ -9,7 +9,7 @@
 </template>
   
 <script setup>
-import Expandable from '@/components/Expandable.vue';
+import Expandable from '@/feature_modules/components/Expandable.vue';
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import Toggle from '@/components/Toggle.vue';
+import Toggle from '@/feature_modules/components/Toggle.vue';
 import { Moon, Sun } from 'lucide-vue-next';
 import { currentTheme, toggleTheme } from '@/feature_modules/StyleVariables/theme';
 

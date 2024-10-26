@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-import Banner from '@/components/Banner.vue'
+import Banner from '@/feature_modules/components/Banner.vue'
 
 </script>
 
