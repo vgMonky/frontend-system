@@ -40,7 +40,7 @@ const displayTitle = computed(() => isEditMode.value ? "Frontend System" : props
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid var(--c3);
-  background-color: rgba(var(--c4-rgb), 0.7); /* Added RGB transparency */
+  background-color: rgba(var(--c4-rgb), 0.9); 
   position: fixed;
   top: 0;
   left: 0;

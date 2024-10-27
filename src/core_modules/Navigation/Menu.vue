@@ -81,7 +81,7 @@ const toggleCreateInfo = () => {
   background-color: rgba(var(--c4-rgb), 1); /* Added RGB transparency */
   border-left: 1px solid var(--c3);
   border-top: 1px solid var(--c3);
-  padding: 80px 20px;
+  padding: 100px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;

@@ -2,7 +2,8 @@
 
 
   <div class="landing-page">
-
+    
+    <br><br><br>
     <div class="hero">
       <div class="glass-container"></div>
       <div class="color-container"></div>
