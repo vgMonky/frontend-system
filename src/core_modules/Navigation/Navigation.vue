@@ -17,7 +17,7 @@ useViewWatcher();
 <style scoped>
 view {
   padding: 80px 10px 0px;
-  margin: 0px auto;
+  margin: 0px auto 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
