@@ -1,9 +1,9 @@
 <script setup>
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { useMenuStore } from './menuStore';
-import { isMenuOpen, closeMenu } from './toggleMenu';
-import { getEditMode } from './toggleEditMode';
+import { useMenuStore } from '../menuStore';
+import { isMenuOpen, closeMenu } from '../toggleMenu';
+import { getEditMode } from '../toggleEditMode';
 
 const router = useRouter();
 const menuStore = useMenuStore();
