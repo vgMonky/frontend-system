@@ -1,6 +1,6 @@
 <script setup>
   import { onMounted } from 'vue';
-  import Navigation from '@/core_modules/Navigation/components/Navigation.vue';
+  import Navigation from '@/core_modules/Navigation/Navigation.vue';
   import { initTheme } from '@/core_modules/StyleVariables/theme';
   import { initColorVariables, initTextVariables, initShapeVariables } from '@/core_modules/StyleVariables/variableManager';
 

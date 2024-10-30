@@ -1,6 +1,6 @@
 <script setup>
 import NavBar from './NavBar.vue';
-import { useViewWatcher } from '../viewWatcher';
+import { useViewWatcher } from './viewWatcher';
 
 // Initialize the view watcher
 useViewWatcher();
