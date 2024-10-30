@@ -4,6 +4,11 @@
       :blurPixel="0"
     >
     </Banner>
+
+    
+    <img src="@/../public/81a8W_LrAwL-removebg-preview.png" width="400px">
+    
+
   <em>
     <h4>Frontend System Library</h4>
     <p class="ps">*** You can test the system live right now by following the straight forward workflow: 
