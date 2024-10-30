@@ -1,6 +1,6 @@
 import { ref, watch } from 'vue';
 import { saveToLocal, loadFromLocal } from '@/core_modules/StyleVariables/saveLocal';
-import defaultVariables from './default_variables.json';
+import defaultVariables from '@/core_config/style/default_variables.json';
 
 // Create refs for each variable group
 const colorVariables = ref(loadFromLocal('colorVariables', defaultVariables.colorVariables));
