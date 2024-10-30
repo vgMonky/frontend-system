@@ -4,11 +4,12 @@ import { useRouter } from 'vue-router';
 import { useMenuStore } from '../menuStore';
 import { isMenuOpen, closeMenu } from '../toggleMenu';
 import { getEditMode } from '../toggleEditMode';
+import { ChevronDown, ChevronUp } from 'lucide-vue-next';
 
 const router = useRouter();
 const menuStore = useMenuStore();
 const menuRef = ref(null);
-const showCreateInfo = ref(false);
+const showEditItems = ref(false);
 
 const menuClass = computed(() => ({
   'menu-sidebar': true,
@@ -16,7 +17,6 @@ const menuClass = computed(() => ({
 }));
 
 const isEditMode = computed(() => getEditMode().value);
-
 const baseMenuItems = computed(() => menuStore.getBaseMenuItems);
 const customMenuItems = computed(() => menuStore.getCustomMenuItems);
 
@@ -35,6 +35,11 @@ const handleOutsideClick = (event) => {
   }
 };
 
+const toggleEditItems = (event) => {
+  event.stopPropagation(); // Stop event from bubbling up
+  showEditItems.value = !showEditItems.value;
+};
+
 watch(isMenuOpen, (isOpen) => {
   if (isOpen) {
     setTimeout(() => {
@@ -44,27 +49,24 @@ watch(isMenuOpen, (isOpen) => {
     document.removeEventListener('click', handleOutsideClick);
   }
 });
-
-const toggleCreateInfo = () => {
-  showCreateInfo.value = !showCreateInfo.value;
-};
 </script>
 
 <template>
   <div class="menu">
     <div :class="menuClass" ref="menuRef">
-      <template v-if="isEditMode">
-        <router-link v-for="item in baseMenuItems" :key="item.path" :to="item.path">
-          {{ item.name }}
-        </router-link>
-        <br>
-        <button @click="toggleCreateInfo">+ Create +</button>
-        <div v-if="showCreateInfo" class="create-info">
-          <p class="ps">To add a new view, create a new .vue file in src/views/newfile.vue or set an index to order them if you have many files:</p>
-          <p class="ps contained">E.g. src/views/1_firstfile.vue</p>
+      <div v-if="isEditMode" class="edit-section">
+        <button @click="toggleEditItems" class="edit-toggle">
+          Edit Views
+          <ChevronDown v-if="!showEditItems" />
+          <ChevronUp v-if="showEditItems" />
+        </button>
+        <div v-if="showEditItems" class="edit-items">
+          <router-link v-for="item in baseMenuItems" :key="item.path" :to="item.path">
+            {{ item.name }}
+          </router-link>
         </div>
-        <br>
-      </template>
+        <div class="divider"></div>
+      </div>
       <router-link v-for="item in customMenuItems" :key="item.path" :to="item.path">
         {{ item.name }}
       </router-link>
@@ -76,9 +78,9 @@ const toggleCreateInfo = () => {
 .menu-sidebar {
   position: fixed;
   right: 0;
-  height: 100vh; /* Adjusted to account for navbar height */
+  height: 100vh;
   width: 250px;
-  background-color: rgba(var(--c4-rgb), 1); /* Added RGB transparency */
+  background-color: rgba(var(--c4-rgb), 1);
   border-left: 1px solid var(--c3);
   border-top: 1px solid var(--c3);
   padding: 100px 20px;
@@ -96,20 +98,49 @@ const toggleCreateInfo = () => {
 .menu-sidebar.open {
   transform: translateX(0);
 }
+
 .menu-sidebar a {
   color: var(--c1);
   text-decoration: none;
   font-size: 1.1rem;
 }
+
 .menu-sidebar a:hover {
   text-decoration: underline;
 }
+
 .menu-sidebar a.router-link-active {
   font-weight: bold;
 }
-.create-info {
-  border: 1px solid var(--c3);
-  padding: 10px;
-  border-radius: var(--r0);
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: var(--c1);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.edit-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--c3);
+  margin: 10px 0;
 }
 </style>
