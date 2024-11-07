@@ -8,7 +8,7 @@
   <div class="contained">
     <p>Dark and Light theme.</p>
     <br>
-    <em><p class="ps">* We recommend toggling between themes while editing the variables. You can use [ Alt + s ] keybind. </p></em>
+    <em><p class="ps">* We recommend toggling between themes while editing the variables. **Set keybind for this** </p></em>
     <br>
     <ToggleTheme />
   </div>
@@ -17,7 +17,7 @@
     <div>
       <button class="" @click="applyRandomStyle">
         <Rainbow/>
-        Change Current Style
+        Randome Style
       </button>
     </div>
     <button class="quiet" @click="downloadStyle">

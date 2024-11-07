@@ -1,7 +1,7 @@
 <template>
   <div class="color-editor">
     <h3>Edit Color Variables</h3>
-    <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. It's an indicator of interaction, thoe in some cases to much accent everywhere can lead to fatigue so the use of class 'quiet' in buttons will turn off the accent color for him.  </p>
+    <p>The strategic use of an 'accent' color variable, plays a crucial role in maintaining accessibility and visual hierarchy across our user interface. It's an indicator of interaction.  </p>
     <br>
     <div class="contained">
 
