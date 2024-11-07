@@ -11,7 +11,7 @@
         <h1>Frontend System Documentation</h1>
         <h4 class="hero-subtitle">An organiced starting point for developing a website based on a feature modules structure.</h4>
         <div class="cta-buttons">
-          <button class="cta-button contained bold" @click="scrollToSection('workflow')">Get Started</button>
+          <button class="cta-button contained bold" @click="toggleMenu">Get Started</button>
           <button class="cta-button contained quiet" @click="scrollToSection('features')">Explore Features</button>
         </div>
       </div>
@@ -52,7 +52,7 @@
 
 
     <Banner >
-      <h4>Some content ...</h4>
+      <p class="ps">*** Banner Content ***</p>
     </Banner>
 
   </div>
@@ -60,6 +60,7 @@
 
 <script setup>
 import Banner from '@/core_modules/free_components/Banner.vue'
+import { toggleMenu } from '@/core_modules/Navigation/toggleMenu';
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);

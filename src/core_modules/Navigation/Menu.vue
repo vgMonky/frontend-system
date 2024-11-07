@@ -9,7 +9,7 @@ import { ChevronDown, ChevronUp } from 'lucide-vue-next';
 const router = useRouter();
 const menuStore = useMenuStore();
 const menuRef = ref(null);
-const showEditItems = ref(false);
+const showEditItems = ref(true);
 
 const menuClass = computed(() => ({
   'menu-sidebar': true,
