@@ -1,0 +1,1 @@
+import{_ as s,b as r,d as n,F as t,o}from"./index-DQPUY_Xg.js";const l={};function a(c,e){return o(),r(t,null,[e[0]||(e[0]=n("br",null,null,-1)),e[1]||(e[1]=n("p",{class:"ps"},"*** view content ***",-1))],64)}const f=s(l,[["render",a]]);export{f as default};
