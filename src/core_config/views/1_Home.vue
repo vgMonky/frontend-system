@@ -40,8 +40,13 @@
           <p>Toggleable development environment for seamless transitions between user and developer views.</p>
         </div>
         <div class="feature-item contained">
-          <h4>Styled Component Library</h4>
-          <p>Built on a generic style variable system, ensuring global consistency and alignment.</p>
+          <h4>Style Variable System</h4>
+          <p>Components built on a generic style variable system, ensuring global consistency and alignment.</p>
+          <br>
+          <button class="quiet ps" @click="applyRandomStyle">
+            <Rainbow/>
+            Randome Style
+          </button>
         </div>
         <div class="feature-item contained">
           <h4>Navigation System</h4>
@@ -61,6 +66,12 @@
 <script setup>
 import Banner from '@/core_modules/free_components/Banner.vue'
 import { toggleMenu } from '@/core_modules/Navigation/toggleMenu';
+import {Rainbow} from 'lucide-vue-next';
+import { importRandomStyle } from '@/core_modules/StyleVariables/save/savedStyleManager';
+
+const applyRandomStyle = () => {
+  importRandomStyle();
+};
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
