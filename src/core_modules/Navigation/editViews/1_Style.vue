@@ -20,21 +20,25 @@
         Randome Style
       </button>
     </div>
-    <button class="quiet" @click="downloadStyle">
-      <Download class="icon" />
-      Download Current Style
-    </button>
-    <input
-      type="file"
-      ref="fileInput"
-      style="display: none;"
-      @change="importStyle"
-      accept=".json"
-    >
-    <button class="quiet" @click="triggerFileInput">
-      <Upload class="icon" />
-      Import Style
-    </button>
+    <div>
+      <button class="quiet" @click="downloadStyle">
+        <Download class="icon" />
+        Download Current Style
+      </button>
+    </div>
+    <div>
+      <input
+        type="file"
+        ref="fileInput"
+        style="display: none;"
+        @change="importStyle"
+        accept=".json"
+      >
+      <button class="quiet" @click="triggerFileInput">
+        <Upload class="icon" />
+        Import Style
+      </button>
+    </div>
   </div>
   <br><br>
   <Expandable title="Color Editor" titleopen="Hide Color Editor">
