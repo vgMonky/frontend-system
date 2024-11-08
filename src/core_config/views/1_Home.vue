@@ -56,9 +56,9 @@
     </section>
 
 
-    <Banner >
+    <!-- <Banner >
       <p class="ps">*** Banner Content ***</p>
-    </Banner>
+    </Banner> -->
 
   </div>
 </template>
